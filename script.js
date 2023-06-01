@@ -104,24 +104,6 @@ function about() {
 window.addEventListener("scroll", about);
 
 
-function skills() {
-  var reveals = document.querySelectorAll(".skills");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-window.addEventListener("scroll", skills);
-
-
 function projects() {
   var reveals = document.querySelectorAll(".projects");
 
@@ -138,21 +120,3 @@ function projects() {
   }
 }
 window.addEventListener("scroll", projects);
-
-
-function contact() {
-  var reveals = document.querySelectorAll(".contact");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-window.addEventListener("scroll", contact);

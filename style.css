@@ -281,9 +281,8 @@ section .title::after {
 
 /* Animation */
 .about,
-.skills,
-.projects,
-.contact {
+.projects
+{
   position: relative;
   transform: translateY(150px);
   opacity: 0;
@@ -291,9 +290,8 @@ section .title::after {
 }
 
 .about.active,
-.skills.active,
-.projects.active,
-.contact.active {
+.projects.active
+{
   transform: translateY(0);
   opacity: 1;
 }
