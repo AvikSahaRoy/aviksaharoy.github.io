@@ -280,8 +280,10 @@ section .title::after {
 
 
 /* Animation */
-/* .about,
-.projects
+.about,
+.skills,
+.projects,
+.contact
 {
   position: relative;
   transform: translateY(150px);
@@ -290,11 +292,13 @@ section .title::after {
 }
 
 .about.active,
-.projects.active
+.skills.active,
+.projects.active,
+.contact.active
 {
   transform: translateY(0);
   opacity: 1;
-} */
+}
 
 
 
@@ -463,14 +467,13 @@ section .title::after {
   text-align: justify;
 }
 
-.skills-content img {
+/* .skills-content img {
   margin-top: 20px;
   height: 70px;
   width: 70px;
   background: #ffffff;
   border-radius: 50%;
-  /* border: 5px solid #00eaff; */
-}
+} */
 
 
 
