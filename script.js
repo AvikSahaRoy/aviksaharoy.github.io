@@ -163,7 +163,12 @@ const disabledKeys = ["c", "C", "x", "J", "u", "I"]; // keys that will be disabl
 
 const showAlert = e => {
   e.preventDefault(); // preventing its default behaviour
-  return alert("Sorry, you can't view or copy source codes this way!");
+  // return alert("Sorry, you can't view or copy source codes this way!");
+  return Swal.fire({
+    icon: 'warning',
+    title: 'Oops...',
+    text: 'Sorry, you can not view or copy source codes this way!',
+  })
 }
 
 document.addEventListener("contextmenu", e => {
