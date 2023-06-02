@@ -813,6 +813,10 @@ section .title::after {
   color: #fff;
 }
 
+#blink {
+  color: #00ccff;
+}
+
 /*  Footer  */
 footer {
   background: #1e3551;
