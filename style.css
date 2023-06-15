@@ -494,7 +494,7 @@ section .title::after {
   overflow: hidden;
   transition: all 0.3s ease;
   color: #f1f1f1;
-  height: 480px;
+  height: 500px;
   font-size: 12px; /* change font size*/
 }
 
