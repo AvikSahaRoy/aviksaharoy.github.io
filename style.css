@@ -494,7 +494,7 @@ section .title::after {
   overflow: hidden;
   transition: all 0.3s ease;
   color: #f1f1f1;
-  height: 570px;
+  height: 480px;
   font-size: 12px; /* change font size*/
 }
 
@@ -617,7 +617,7 @@ section .title::after {
 } */
 
 .contact .title::after {
-  content: "—Get in Touch—";
+  content: "Get in Touch";
   color: #fafafa;
 }
 
