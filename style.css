@@ -122,7 +122,7 @@ section .title::after {
 
 .navbar.sticky {
   padding: 15px 0;
-  background: #1e3551;
+  background: #000;
 }
 
 .navbar .max-width {
@@ -169,7 +169,7 @@ section .title::after {
 }
 
 .navbar.sticky .menu li a:hover {
-  color: #fff;
+  color: #00f7ff;
 }
 
 /*  Menu Btn  */
@@ -184,7 +184,7 @@ section .title::after {
   position: fixed;
   height: 45px;
   width: 42px;
-  background: #1e3551;
+  background: crimson;
   right: 30px;
   bottom: 10px;
   text-align: center;
@@ -367,6 +367,10 @@ section .title::after {
   animation: pulsate 1s ease-in-out;
 }
 
+.about .eduDetails {
+  font-size: 13px;
+}
+
 
 /*  Skills  */
 .skills {
@@ -374,9 +378,13 @@ section .title::after {
   color: #fff;
   background: #111;
 }
+
+.skills .title {
+  color: cyan
+}
 .skills .title::after {
   content: "—What I Know ?—";
-  color: #fafafa;
+  color: #fff;
 }
 
 .skills .skills-content .column {
@@ -387,6 +395,7 @@ section .title::after {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: cyan;
 }
 
 .skills .skills-content .left p {
@@ -461,6 +470,7 @@ section .title::after {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: cyan;
 }
 
 .skills .skills-content .right p {
@@ -494,7 +504,7 @@ section .title::after {
   overflow: hidden;
   transition: all 0.3s ease;
   color: #f1f1f1;
-  height: 500px;
+  height: 510px;
   font-size: 12px; /* change font size*/
 }
 
@@ -503,7 +513,7 @@ section .title::after {
 }
 
 .projects .carousel .card:hover {
-  background: #1e3551;
+  background: crimson;
 }
 
 .projects .carousel .card .box {
@@ -522,8 +532,8 @@ section .title::after {
   font-size: 20px;
   font-weight: 500;
   margin: 10px 0 7px 0;
-
 }
+
 
 .projects .carousel .card img {
   height: 150px;
@@ -539,37 +549,23 @@ section .title::after {
 }
 
 .projects .button-area {
-  display: flex;
-  align-items: center;
-}
-
-.projects .button-area a {
-  text-decoration: none;
-  color: #000;
-}
-
-.projects .button-area button {
-  display: block;
-  width: 150px !important;
-  height: 40px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-  background: #06e9e9;
-  /* border: 2px solid #000; */
-  transition: all 0.3s ease;
   margin-top: 10px;
-  
 }
 
-.projects .button-area button:hover {
-  color: #000;
-  background: #f1f1f1;
-  animation: pulsate 1s ease-in-out;
+.projects .button-area i {
+  color: #fff;
+  font-size: 35px;
+  margin: 0 20px 0 20px;
 }
+
+.projects .button-area .bi-github:hover {
+  color: #000;
+}
+
+.projects .button-area .bi-eye-fill:hover {
+  color: #000;
+}
+
 
 .owl-dots {
   text-align: center;
@@ -593,7 +589,7 @@ section .title::after {
 
 .owl-dot.active,
 .owl-dot:hover {
-  background: #18365a !important;
+  background: crimson !important;
 }
 
 /*  Contact  */
@@ -601,6 +597,10 @@ section .title::after {
 .contact {
   color: #fff;
   background: #111;
+}
+
+.contact .title {
+  color: cyan;
 }
 
 .contact .title::before {
@@ -629,6 +629,7 @@ section .title::after {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: cyan;
 }
 
 .contact .contact-content .left p {
@@ -722,13 +723,13 @@ section .title::after {
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
-  background: #1e3551;
-  border: 2px solid #1e3551;
+  background: crimson;
+  border: 2px solid crimson;
   transition: all 0.3s ease;
 }
 
 .right form .button-area button:hover {
-  color: #1e3551;
+  color: #fff;
   background: none;
   animation: pulsate 1s ease-in-out;
 }
@@ -772,7 +773,7 @@ section .title::after {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #1e3551;
+  background-color: crimson;
   text-align: center;
   transition: 0.6s;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
@@ -819,9 +820,9 @@ section .title::after {
 
 /*  Footer  */
 footer {
-  background: #1e3551;
+  background: crimson;
   padding: 6px 16px;
-  color: #fafafa;
+  color: #fff;
   text-align: center;
 }
 
