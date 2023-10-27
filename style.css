@@ -139,7 +139,6 @@ section .title::after {
 
 /*  Nav Logo Span Linear-Gradient  */
 .navbar .logo a span {
-  /* background: linear-gradient(135deg, #232323, #fff, crimson); */
   background: linear-gradient(135deg, #00eaff, #fff, crimson);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -184,12 +183,12 @@ section .title::after {
   position: fixed;
   height: 45px;
   width: 42px;
-  background: crimson;
+  background: #00eaff;
   right: 30px;
   bottom: 10px;
   text-align: center;
   line-height: 45px;
-  color: #fff;
+  color: #000000;
   z-index: 9999;
   font-size: 30px;
   border-radius: 6px;
@@ -198,6 +197,7 @@ section .title::after {
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
+  border: 1px solid black;
 }
 
 .scroll-up-btn.show {
@@ -222,8 +222,6 @@ section .title::after {
   background-attachment: fixed;
   font-family: "Ubuntu", sans-serif;
 }
-
-
 
 .home .max-width {
   width: 100%;
@@ -258,6 +256,7 @@ section .title::after {
   -webkit-text-fill-color: transparent;
   font-weight: 500;
 }
+
 
 .home .home-content a {
   display: inline-block;
@@ -322,7 +321,8 @@ section .title::after {
   height: 400px;
   width: 400px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 10px;
+  /* border: 1px solid black; */
 }
 
 .about .about-content .right {
@@ -367,8 +367,13 @@ section .title::after {
   animation: pulsate 1s ease-in-out;
 }
 
+.about .about-content .right ul{
+  font-weight: bold;
+}
+
 .about .eduDetails {
-  font-size: 13px;
+  /* font-size: 13px; */
+  font-weight: lighter;
 }
 
 
@@ -504,7 +509,7 @@ section .title::after {
   overflow: hidden;
   transition: all 0.3s ease;
   color: #f1f1f1;
-  height: 510px;
+  /* height: 510px; */
   font-size: 12px; /* change font size*/
 }
 
