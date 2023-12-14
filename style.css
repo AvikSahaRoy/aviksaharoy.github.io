@@ -611,7 +611,7 @@ section .title::after {
     margin: 0 5px;
     outline: none !important;
     border-radius: 50%;
-    border: 2px solid #B7AB98!important;
+    border: 2px solid #B7AB98 !important;
     transition: all 0.3s ease;
 }
 
@@ -1081,6 +1081,10 @@ a.active {
 
 
 /* Dark mode button */
+.darkModeButton {
+    margin-top: 20px;
+}
+
 .checkbox {
     opacity: 0;
     position: absolute;
@@ -1125,5 +1129,3 @@ a.active {
 
 
 /* Dark mode end -------------------- */
-
-
