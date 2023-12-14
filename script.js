@@ -228,8 +228,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.classList.remove('dark-mode');
   }
 
-  // Attach the toggleDarkMode function to the checkbox's click event
-  darkModeToggle.addEventListener('change', toggleDarkMode);
+  // Attach the toggleDarkMode function to the checkbox's click and touch events
+  darkModeToggle.addEventListener('click', toggleDarkMode);
+  darkModeToggle.addEventListener('touchstart', toggleDarkMode);
 
   // Check local storage for dark mode preference
   const isDarkMode = localStorage.getItem('darkMode') === 'true';
