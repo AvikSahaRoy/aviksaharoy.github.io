@@ -204,10 +204,10 @@ $(document).ready(function () {
 
 
 // Dark mode ----------------
-function myFunction() {
-  var element = document.body;
-  element.classList.toggle("dark-mode");
-}
+// function myFunction() {
+//   var element = document.body;
+//   element.classList.toggle("dark-mode");
+// }
 
 
 
@@ -219,27 +219,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Apply dark mode if the preference is true
   if (isDarkMode) {
-      enableDarkMode();
+    toggleDarkMode();
   }
 
   // Function to toggle dark mode
-  function myFunction() {
-      if (darkModeToggle.checked) {
-          enableDarkMode();
-          localStorage.setItem('darkMode', 'true');
-      } else {
-          disableDarkMode();
-          localStorage.setItem('darkMode', 'false');
-      }
+  function toggleDarkMode() {
+    if (darkModeToggle.checked) {
+      enableDarkMode();
+      localStorage.setItem('darkMode', 'true');
+    } else {
+      disableDarkMode();
+      localStorage.setItem('darkMode', 'false');
+    }
   }
 
   // Function to enable dark mode
   function enableDarkMode() {
-      document.body.classList.add('dark-mode');
+    document.body.classList.add('dark-mode');
   }
 
   // Function to disable dark mode
   function disableDarkMode() {
-      document.body.classList.remove('dark-mode');
+    document.body.classList.remove('dark-mode');
   }
+
+  // Attach the toggleDarkMode function to the checkbox's click event
+  darkModeToggle.addEventListener('click', toggleDarkMode);
 });
