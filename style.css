@@ -1079,6 +1079,8 @@ a.active {
     }
 }
 
+
+/* Dark mode button */
 .checkbox {
     opacity: 0;
     position: absolute;
@@ -1119,6 +1121,8 @@ a.active {
 .checkbox:checked+.checkbox-label .ball {
     transform: translateX(24px);
 }
+
+
 
 /* Dark mode end -------------------- */
 

@@ -177,7 +177,7 @@ document.addEventListener("contextmenu", e => {
 
 document.addEventListener("keydown", e => {
   // calling showAlert() function, if the pressed key matched to disabled keys
-  if((e.ctrlKey && disabledKeys.includes(e.key)) || e.key === "F12") {
+  if ((e.ctrlKey && disabledKeys.includes(e.key)) || e.key === "F12") {
     showAlert(e);
   }
 });
@@ -185,42 +185,27 @@ document.addEventListener("keydown", e => {
 // Blink ---------------------------------------------
 var blink = document.getElementById('blink');
 setInterval(function () {
-  blink.style.opacity = 
-  (blink.style.opacity == 0 ? 1 : 0);
-}, 500); 
+  blink.style.opacity =
+    (blink.style.opacity == 0 ? 1 : 0);
+}, 500);
 
 
 /* Active underline nav items -------------------*/
 $(document).ready(function () {
   $('a').click(function () {
-      // Remove 'active' class from all menu items
-      $('a').removeClass('active');
-      
-      // Add 'active' class to the clicked menu item
-      $(this).addClass('active');
+    // Remove 'active' class from all menu items
+    $('a').removeClass('active');
+
+    // Add 'active' class to the clicked menu item
+    $(this).addClass('active');
   });
 });
 
 
 
 // Dark mode ----------------
-// function myFunction() {
-//   var element = document.body;
-//   element.classList.toggle("dark-mode");
-// }
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
   const darkModeToggle = document.getElementById('checkbox');
-
-  // Check local storage for dark mode preference
-  const isDarkMode = localStorage.getItem('darkMode') === 'true';
-
-  // Apply dark mode if the preference is true
-  if (isDarkMode) {
-    toggleDarkMode();
-  }
 
   // Function to toggle dark mode
   function toggleDarkMode() {
@@ -244,5 +229,16 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Attach the toggleDarkMode function to the checkbox's click event
-  darkModeToggle.addEventListener('click', toggleDarkMode);
+  darkModeToggle.addEventListener('change', toggleDarkMode);
+
+  // Check local storage for dark mode preference
+  const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+  // Initialize dark mode based on local storage
+  darkModeToggle.checked = isDarkMode;
+  if (isDarkMode) {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
 });
