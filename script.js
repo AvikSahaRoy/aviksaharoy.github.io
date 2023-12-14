@@ -188,3 +188,58 @@ setInterval(function () {
   blink.style.opacity = 
   (blink.style.opacity == 0 ? 1 : 0);
 }, 500); 
+
+
+/* Active underline nav items -------------------*/
+$(document).ready(function () {
+  $('a').click(function () {
+      // Remove 'active' class from all menu items
+      $('a').removeClass('active');
+      
+      // Add 'active' class to the clicked menu item
+      $(this).addClass('active');
+  });
+});
+
+
+
+// Dark mode ----------------
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const darkModeToggle = document.getElementById('checkbox');
+
+  // Check local storage for dark mode preference
+  const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+  // Apply dark mode if the preference is true
+  if (isDarkMode) {
+      enableDarkMode();
+  }
+
+  // Function to toggle dark mode
+  function myFunction() {
+      if (darkModeToggle.checked) {
+          enableDarkMode();
+          localStorage.setItem('darkMode', 'true');
+      } else {
+          disableDarkMode();
+          localStorage.setItem('darkMode', 'false');
+      }
+  }
+
+  // Function to enable dark mode
+  function enableDarkMode() {
+      document.body.classList.add('dark-mode');
+  }
+
+  // Function to disable dark mode
+  function disableDarkMode() {
+      document.body.classList.remove('dark-mode');
+  }
+});

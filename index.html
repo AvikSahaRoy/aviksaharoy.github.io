@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Avik Saha Roy | Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="Images/favicon.png">
+  <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css'>
   <link rel='stylesheet'
@@ -14,6 +14,7 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="./style.css">
+
 
 </head>
 
@@ -25,7 +26,7 @@
   <!-- Header -->
   <nav class="navbar">
     <div class="max-width">
-      <div class="logo"><a href="#"><span>AVIKSAHAROY</span></a></div>
+      <div class="logo"><a href="#"><span>AvikSahaRoy</span></a></div>
       <ul class="menu">
         <li><a href="#home" class="menu-btn"><strong>HOME</strong></a></li>
         <li><a href="#about" class="menu-btn"><strong>ABOUT</strong></a></li>
@@ -47,6 +48,14 @@
         <div class="text-2">Avik Saha Roy</div>
         <div class="text-3">And I'm a <span class="typing"></span></div>
         <!-- <a href="#">Hire me</a> -->
+        <div class="darkModeButton">
+          <input type="checkbox" class="checkbox" id="checkbox" onclick="myFunction()">
+          <label for="checkbox" class="checkbox-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="ball"></span>
+          </label>
+        </div>
       </div>
     </div>
   </section>
@@ -79,31 +88,36 @@
           <div class="text">My Qualification</div>
           <p>
           <ul style="list-style-type: square;">
-            <li>Master of Computer Application (MCA) <br>
+            <li>
+              <strong>Master of Computer Application (MCA)</strong> <br>
               <span class="eduDetails">
                 Siliguri Institute of Technology (June 2023) <br>
                 CGPA - 9.43
               </span>
             </li>
-            <li>Bachelor of Computer Application (BCA) <br>
+            <li>
+              <strong>Bachelor of Computer Application (BCA)</strong> <br>
               <span class="eduDetails">
                 Siliguri Institute of Technology (June 2021) <br>
                 DGPA - 8.52
               </span>
             </li>
-            <li>Higher Secondary (12th) <br>
+            <li>
+              <strong>Higher Secondary (12th)</strong> <br>
               <span class="eduDetails">
                 Falakata High School (May 2018) <br>
                 Percentage - 76.6%
               </span>
             </li>
-            <li>Secondary (10th) <br>
+            <li>
+              <strong>Secondary (10th)</strong> <br>
               <span class="eduDetails">
                 Falakata High School (May 2016) <br>
                 Percentage - 67.7%
               </span>
             </li>
           </ul>
+
           </p>
 
           <!-- <a href="#" target="blank">Download CV</a> -->
@@ -123,7 +137,7 @@
 
           <div class="text">PROJECTS</div>
           <p>
-            <li class="project">E-commerce Website (HTML, CSS, Bootstrap, JavaScript, Java, MySQL)</li>
+            <li class="project">E-commerce Website (HTML, CSS, Bootstrap, JavaScript, Java, JSP, MySQL)</li>
             <li class="project">Real-Time Weather App (React, OpenWeatherMap API)</li>
             <li class="project">Note-Taking App (React)</li>
             <li class="project">Resume Generator (React)</li>
@@ -134,7 +148,7 @@
           <br>
 
           <div class="text">SKILLS</div>
-          <p>HTML, CSS, JavaScript, Bootstrap, React, Java, Python, Spring Boot, MySQL</p>
+          <p>HTML, CSS, JavaScript, Bootstrap, React, Java, Python, Spring Boot, MySQL, Postman</p>
           <br>
 
           <!-- <div class="text">DEVELOPMENT SKILLS</div>
@@ -190,6 +204,17 @@
         <img src="Images/Eclipse.png" alt="">
         <img src="Images/Oracle.png" alt=""> -->
       </div>
+      <div class="Proicons">
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+        <i class="fa-brands fa-square-js"></i>
+        <i class="fa-brands fa-bootstrap"></i>
+        <i class="fa-brands fa-react"></i>
+        <i class="fa-brands fa-java"></i>
+        <i class="fa-brands fa-python"></i>
+        <i class="fa-solid fa-database"></i>
+        <i class="fa-brands fa-square-github"></i>
+      </div>
     </div>
   </section>
 
@@ -204,33 +229,15 @@
             <img src="Images/Ecommerce.png" alt="">
             <div class="text">Ecommerce Website</div>
             <p>
-              <b>Technologies used:</b> HTML, CSS, Bootstrap, JavaScript, JAVA, MySQL <br><br>
+              <b>Technologies used:</b> HTML, CSS, Bootstrap, JavaScript, JAVA, JSP, MySQL <br><br>
               The ecommerce website is responsive and optimized for all devices. Customers can use filters to find
               products and easily add/remove items from their cart. Checkout process is simple with multiple payment
               and shipping options.
             </p>
             <div class="button-area">
+              <a href="#" target="_blank"><i class="bi bi-eye-fill"></i></a>
               <a href="https://github.com/AvikSahaRoy/E-commerce-Website" target="_blank"><i
                   class="bi bi-github"></i></a>
-              <a href="#" target="_blank"><i class="bi bi-eye-fill"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <img src="Images/Portfolio.jpg" alt="">
-            <div class="text">Portfolio Website</div>
-            <p>
-              <b>Technologies used:</b> HTML, CSS, Bootstrap, JavaScript <br><br>
-              The Portfolio Website is a visually appealing platform that showcases my creative work and skills.
-              Through a clean and modern design, it presents a curated collection of my best projects, allowing
-              visitors to explore my abilities in web design, graphic design, photography, and more.
-            </p>
-            <div class="button-area">
-              <a href="https://github.com/AvikSahaRoy/aviksaharoy.github.io" target="_blank"><i
-                  class="bi bi-github"></i></a>
-              <a href="https://aviksaharoy.github.io/" target="_blank"><i class="bi bi-eye-fill"></i></a>
             </div>
           </div>
         </div>
@@ -246,8 +253,8 @@
               maintains students and book records.
             </p>
             <div class="button-area">
-              <a href="#" target="_blank"><i class="bi bi-github"></i></a>
               <a href="#" target="_blank"><i class="bi bi-eye-fill"></i></a>
+              <a href="#" target="_blank"><i class="bi bi-github"></i></a>
             </div>
           </div>
         </div>
@@ -262,9 +269,10 @@
               transform complex data into visually appealing and interactive displays.
             </p>
             <div class="button-area">
+              <a href="#" target="_blank"><i class="bi bi-eye-fill"></i></a>
+
               <a href="https://github.com/AvikSahaRoy/Creating-Dashboard-Using-Power-BI" target="_blank"><i
                   class="bi bi-github"></i></a>
-              <a href="#" target="_blank"><i class="bi bi-eye-fill"></i></a>
             </div>
           </div>
         </div>
@@ -278,9 +286,9 @@
               My Weather App provides real-time weather information and forecasts for multiple locations.
             </p>
             <div class="button-area">
+              <a href="https://weathernows.netlify.app/" target="_blank"><i class="bi bi-eye-fill"></i></a>
               <a href="https://github.com/AvikSahaRoy/weathernows.github.io" target="_blank"><i
                   class="bi bi-github"></i></a>
-              <a href="https://weathernows.netlify.app/" target="_blank"><i class="bi bi-eye-fill"></i></a>
             </div>
           </div>
         </div>
@@ -295,8 +303,8 @@
               components to create a dynamic and interactive user interface and store notes into local storage.
             </p>
             <div class="button-area">
-              <a href="https://github.com/AvikSahaRoy/Notes-App-React" target="_blank"><i class="bi bi-github"></i></a>
               <a href="https://quicksnotes.netlify.app/" target="_blank"><i class="bi bi-eye-fill"></i></a>
+              <a href="https://github.com/AvikSahaRoy/Notes-App-React" target="_blank"><i class="bi bi-github"></i></a>
             </div>
           </div>
         </div>
@@ -311,8 +319,8 @@
               creating professional resumes.
             </p>
             <div class="button-area">
-              <a href="https://github.com/AvikSahaRoy/Resume-Generator" target="_blank"><i class="bi bi-github"></i></a>
               <a href="https://resumemake.netlify.app/" target="_blank"><i class="bi bi-eye-fill"></i></a>
+              <a href="https://github.com/AvikSahaRoy/Resume-Generator" target="_blank"><i class="bi bi-github"></i></a>
             </div>
           </div>
         </div>
@@ -337,7 +345,7 @@
               <i class="fa-solid fa-location-dot"></i>
               <div class="info">
                 <div class="head">&nbsp;<b>Address</b></div>
-                <div class="sub-title">&nbsp;Falakata, West Bengal</div>
+                <div class="sub-title">&nbsp;Falakata, West Bengal, India</div>
               </div>
             </div>
 
@@ -403,8 +411,10 @@
   <!-- Footer -->
   <footer>
     <span>
-      – Thanks for visiting! – <br>
-      Avik Saha Roy | <span class="far fa-copyright"></span> 2023 All Rights Reserved.
+      <!-- – Thanks for visiting! – <br> -->
+      Made With
+      <span style="color: rgb(255, 115, 0);">❤</span>
+      by Avik Saha Roy <br> <span class="far fa-copyright"></span> 2023 All Rights Reserved
     </span>
   </footer>
 
