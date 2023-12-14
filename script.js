@@ -229,6 +229,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Attach the toggleDarkMode function to the checkbox's click and touch events
+  // for mobile
   darkModeToggle.addEventListener('click', toggleDarkMode);
   darkModeToggle.addEventListener('touchstart', toggleDarkMode);
 
