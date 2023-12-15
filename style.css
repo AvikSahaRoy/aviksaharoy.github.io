@@ -545,7 +545,7 @@ section .title::after {
 }
 
 .projects .carousel .card:hover {
-    background: rgb(255, 115, 0);
+    background: #B7AB98;
     color: #000;
 }
 
@@ -671,6 +671,10 @@ section .title::after {
 
 .contact .contact-content .left .icons {
     margin: 10px 0;
+}
+
+.contact .contact-content .left .icons .row i {
+    color: #B7AB98;
 }
 
 .contact .contact-content .row {
@@ -851,7 +855,7 @@ section .title::after {
 }
 
 #blink {
-    color: rgb(255, 115, 0);
+    color: #B7AB98;
 }
 
 /*  Footer  */
