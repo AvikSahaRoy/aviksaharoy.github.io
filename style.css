@@ -250,7 +250,7 @@ section .title::after {
 .home .home-content .text-3 {
     font-size: 40px;
     margin: 5px 0;
-    /* color: rgb(255, 115, 0); */
+    color: rgb(255, 115, 0);
     font-weight: bold;
 }
 
@@ -259,7 +259,7 @@ section .title::after {
     color: #1e3551;
     /* background: linear-gradient(135deg, #041d3d, #fff, crimson); */
     background: #fff;
-    text-shadow: 1px 1px rgb(255, 115, 0);
+    /* text-shadow: 1px 1px rgb(255, 115, 0); */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 500;
@@ -341,6 +341,7 @@ section .title::after {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
+    color: rgb(255, 115, 0);
 }
 
 /* Linear Gradiant */
@@ -555,6 +556,7 @@ section .title::after {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    height: 480px;
 }
 
 .projects .carousel .card:hover .box {
@@ -582,7 +584,7 @@ section .title::after {
 }
 
 .projects .button-area {
-    margin-top: 10px;
+   padding-top: 20px;
 }
 
 .projects .button-area i {
@@ -1056,11 +1058,15 @@ a.active {
         color: rgb(255, 115, 0);
     }
 
-    .about .about-content .right .text span,
+    /* .about .about-content .right .text span,
     .about .about-content .right .text {
         background: rgb(255, 115, 0);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    } */
+
+    .about .about-content .right .text span {
+        background-color: #fff;
     }
 
     .about .about-content .right ul strong {
