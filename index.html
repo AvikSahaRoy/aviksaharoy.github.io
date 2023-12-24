@@ -26,11 +26,23 @@
   <!-- Header -->
   <nav class="navbar">
     <div class="max-width">
-      <div class="logo"><a href="#"><span>AvikSahaRoy</span></a></div>
+      <div class="logo"><a href=""><span>AvikSahaRoy</span></a></div>
       <ul class="menu">
-        <li></li>
+        <li>
+          <div class="darkModeButton" style="
+            display: flex; justify-content: center; align-items: center;
+            ">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <span class="ball"></span>
+            </label>
+          </div>
+        </li>
         <li><a href="#home" class="menu-btn"><strong>HOME</strong></a></li>
         <li><a href="#about" class="menu-btn"><strong>ABOUT</strong></a></li>
+        <li><a href="#services" class="menu-btn"><strong>SERVICES</strong></a></li>
         <li><a href="#skills" class="menu-btn"><strong>SKILLS</strong></a></li>
         <li><a href="#projects" class="menu-btn"><strong>PROJECTS</strong></a></li>
         <li><a href="#contact" class="menu-btn"><strong>CONTACT</strong></a></li>
@@ -49,14 +61,6 @@
         <div class="text-2">Avik Saha Roy</div>
         <div class="text-3">And I'm a <span class="typing"></span></div>
         <!-- <a href="#">Hire me</a> -->
-        <div class="darkModeButton">
-          <input type="checkbox" class="checkbox" id="checkbox">
-          <label for="checkbox" class="checkbox-label">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <span class="ball"></span>
-          </label>
-        </div>
       </div>
     </div>
   </section>
@@ -128,6 +132,45 @@
   </section>
 
 
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="max-width">
+      <h2 class="title">My Services</h2>
+      <div class="serv-content">
+        <div class="card">
+          <div class="box">
+            <i class="fas fa-laptop-code"></i>
+            <div class="text">Web Design</div>
+            <p style="padding-bottom: 25px;">
+              Transform your vision into a visually stunning online reality with our expert web design, blending
+              aesthetics and user experience seamlessly.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <i class="fas fa-code"></i>
+            <div class="text">Web Development</div>
+            <p>
+              Drive digital innovation and functionality with our web development services, creating dynamic, custom
+              solutions tailored to your business goals.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <div class="text">Creative Design</div>
+            <p>
+              Ignite your brand's personality through our creative design services, where every visual element is
+              meticulously crafted to captivate and engage your audience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Skills -->
   <section class="skills" id="skills">
@@ -136,7 +179,7 @@
       <div class="skills-content">
         <div class="column left">
 
-          <div class="text">PROJECTS</div>
+          <!-- <div class="text">PROJECTS</div>
           <p>
             <li class="project">E-commerce Website (HTML, CSS, Bootstrap, JavaScript, Java, JSP, MySQL)</li>
             <li class="project">Real-Time Weather App (React, OpenWeatherMap API)</li>
@@ -146,11 +189,23 @@
             <li class="project">Library Management System (HTML, CSS, Bootstrap, JavaScript, MySQL, PHP)</li>
             <li class="project">Dashboard using Power Bi (Power BI Desktop App)</li>
           </p>
-          <br>
+          <br> -->
 
-          <div class="text">SKILLS</div>
-          <p>HTML, CSS, JavaScript, Bootstrap, React, Java, Python, Spring Boot, MySQL, Postman</p>
-          <br>
+          <div class="proIcons">
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-square-js"></i>
+            <i class="fa-brands fa-bootstrap"></i>
+            <i class="fa-brands fa-react"></i>
+            <i class="fa-brands fa-java"></i>
+            <i class="fa-solid fa-leaf"></i>
+            <i class="fa-brands fa-python"></i>
+            <i class="fa-solid fa-c"></i>
+            <i class="fa-solid fa-database"></i>
+            <!-- <i class="fa-brands fa-git-alt"></i> -->
+            <i class="fa-brands fa-square-github"></i>
+            <i class="fa-brands fa-npm"></i>
+          </div>
 
           <!-- <div class="text">DEVELOPMENT SKILLS</div>
           <p>
@@ -159,6 +214,10 @@
 
         </div>
         <div class="column right">
+
+          <div class="text">SKILLS</div>
+          <p>HTML, CSS, JavaScript, Bootstrap, React, Java, Python, Spring Boot, MySQL, Postman</p>
+          <br>
 
           <div class="text">CERTIFICATION COURSES</div>
           <p>
@@ -183,18 +242,11 @@
           </ul>
           </p>
           <br>
-          <!-- <div class="text">HOBBIES</div>
-          <p>
-          <ul>
-            <li class="project">Photography</li>
-            <li class="project">Cycling</li>
-            <li class="project">Playing Games</li>
-          </ul>
-          </p> -->
         </div>
 
       </div>
-      <div class="Proicons">
+
+      <!-- <div class="Proicons">
         <i class="fa-brands fa-html5"></i>
         <i class="fa-brands fa-css3-alt"></i>
         <i class="fa-brands fa-square-js"></i>
@@ -207,8 +259,8 @@
         <i class="fa-solid fa-database"></i>
         <i class="fa-brands fa-square-github"></i>
         <i class="fa-brands fa-npm"></i>
-        
-      </div>
+      </div> -->
+
     </div>
   </section>
 
@@ -229,7 +281,7 @@
               and shipping options.
             </p>
             <div class="button-area">
-              <a href="#" target="_blank"><i class="bi bi-eye-fill"></i></a>
+              <a href="#" target="_blank"><i class="fa-solid fa-eye"></i></a>
               <a href="https://github.com/AvikSahaRoy/E-commerce-Website" target="_blank"><i
                   class="bi bi-github"></i></a>
             </div>
@@ -247,7 +299,7 @@
               maintains students and book records.
             </p>
             <div class="button-area">
-              <a href="#" target="_blank"><i class="bi bi-eye-fill"></i></a>
+              <a href="#" target="_blank"><i class="fa-solid fa-eye"></i></a>
               <a href="#" target="_blank"><i class="bi bi-github"></i></a>
             </div>
           </div>
@@ -263,7 +315,7 @@
               transform complex data into visually appealing and interactive displays.
             </p>
             <div class="button-area">
-              <a href="#" target="_blank"><i class="bi bi-eye-fill"></i></a>
+              <a href="#" target="_blank"><i class="fa-solid fa-eye"></i></a>
 
               <a href="https://github.com/AvikSahaRoy/Creating-Dashboard-Using-Power-BI" target="_blank"><i
                   class="bi bi-github"></i></a>
@@ -280,7 +332,7 @@
               My Weather App provides real-time weather information and forecasts for multiple locations.
             </p>
             <div class="button-area">
-              <a href="https://weathernows.netlify.app/" target="_blank"><i class="bi bi-eye-fill"></i></a>
+              <a href="https://weathernows.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
               <a href="https://github.com/AvikSahaRoy/weathernows.github.io" target="_blank"><i
                   class="bi bi-github"></i></a>
             </div>
@@ -297,7 +349,7 @@
               components to create a dynamic and interactive user interface and store notes into local storage.
             </p>
             <div class="button-area">
-              <a href="https://quicksnotes.netlify.app/" target="_blank"><i class="bi bi-eye-fill"></i></a>
+              <a href="https://quicksnotes.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
               <a href="https://github.com/AvikSahaRoy/Notes-App-React" target="_blank"><i class="bi bi-github"></i></a>
             </div>
           </div>
@@ -313,7 +365,7 @@
               creating professional resumes.
             </p>
             <div class="button-area">
-              <a href="https://resumemake.netlify.app/" target="_blank"><i class="bi bi-eye-fill"></i></a>
+              <a href="https://resumemake.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
               <a href="https://github.com/AvikSahaRoy/Resume-Generator" target="_blank"><i class="bi bi-github"></i></a>
             </div>
           </div>
@@ -401,6 +453,11 @@
       </div>
     </div>
   </section>
+
+  <!-- Page load animation -->
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div>
 
   <!-- Footer -->
   <footer>

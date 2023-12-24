@@ -104,6 +104,24 @@ function about() {
 window.addEventListener("scroll", about);
 
 
+function services() {
+  var reveals = document.querySelectorAll(".services");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+window.addEventListener("scroll", services);
+
+
 function skills() {
   var reveals = document.querySelectorAll(".skills");
 
@@ -243,4 +261,21 @@ document.addEventListener('DOMContentLoaded', function () {
   } else {
     disableDarkMode();
   }
+});
+
+
+
+
+
+
+
+
+
+// Page load animation ------------------
+document.addEventListener("DOMContentLoaded", function () {
+  // Simulate a delay (you can replace this with actual loading logic)
+  setTimeout(function () {
+    // Hide the loader and display the content
+    document.querySelector('.loader-container').classList.remove('active');
+  }, 2000); // Adjust the delay time as needed
 });
