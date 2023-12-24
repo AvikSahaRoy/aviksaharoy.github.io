@@ -1033,8 +1033,9 @@ footer span a:hover {
     }
 
     .services .serv-content .card {
-        width: calc(50% - 10px);
+        /* width: calc(50% - 10px); */
         margin-bottom: 20px;
+        width: 100%;
     }
 
     .skills .skills-content .column,
