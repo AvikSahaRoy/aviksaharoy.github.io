@@ -47,7 +47,7 @@ function removeLoader() {
       // add a class to the home section for fade-in animation
       homeSection.classList.add('loaded');
     }
-  }, 0);
+  }, 40);
 }
 
 
