@@ -629,6 +629,7 @@ section .title::after {
     align-items: center;
 }
 
+
 .proIcons i:hover {
     /* color: #fff; */
     transform: scale(1.1);
