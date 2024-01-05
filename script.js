@@ -1,3 +1,67 @@
+
+// Loading animation here -------------------
+// function removeLoader() {
+//   let loader = document.getElementById('loader');
+//   let loaderContent = document.getElementById('loader-content');
+//   let homeSection = document.getElementById('home');
+
+//   let count = 0;
+
+//   let interval = setInterval(() => {
+//     count++;
+//     loaderContent.innerText = `${count}%`;
+
+//     // hide the loader after the count reaches a certain value (e.g., 100)
+//     if (count === 100) {
+//       clearInterval(interval);
+//       loader.style.display = 'none';
+
+//       // add a class to the home section for fade-in animation
+//       homeSection.classList.add('loaded');
+//     }
+//   }, 50);
+// }
+
+function removeLoader() {
+  let loader = document.getElementById('loader');
+  let loaderContent = document.getElementById('loader-content');
+  let homeSection = document.getElementById('home');
+  let circle = document.querySelector('.circle');
+
+  let count = 0;
+
+  let interval = setInterval(() => {
+    count++;
+    loaderContent.innerText = `${count}%`;
+
+    // increase the size of the circle based on the count percentage
+    let newSize = 150 + (count * 1.5); // Adjust the factor as needed
+    circle.style.height = `${newSize}px`;
+    circle.style.width = `${newSize}px`;
+
+    // hide the loader after the count reaches a certain value (e.g., 100)
+    if (count === 101) {
+      clearInterval(interval);
+      loader.style.display = 'none';
+
+      // add a class to the home section for fade-in animation
+      homeSection.classList.add('loaded');
+    }
+  }, 40);
+}
+
+
+// Blink ---------------------------------------------
+var blink = document.getElementById('blink');
+setInterval(function () {
+  blink.style.opacity =
+    (blink.style.opacity == 0 ? 1 : 0);
+}, 500);
+
+
+
+
+
 $(document).ready(function () {
   $(window).scroll(function () {
     //  sticky navbar on scroll script  //
@@ -82,9 +146,6 @@ $(document).ready(function () {
     }
   });
 });
-
-
-
 
 function about() {
   var reveals = document.querySelectorAll(".about");
@@ -200,13 +261,6 @@ document.addEventListener("keydown", e => {
   }
 });
 
-// Blink ---------------------------------------------
-var blink = document.getElementById('blink');
-setInterval(function () {
-  blink.style.opacity =
-    (blink.style.opacity == 0 ? 1 : 0);
-}, 500);
-
 
 /* Active underline nav items -------------------*/
 $(document).ready(function () {
@@ -264,18 +318,3 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-
-
-
-
-
-
-// Page load animation ------------------
-document.addEventListener("DOMContentLoaded", function () {
-  // Simulate a delay (you can replace this with actual loading logic)
-  setTimeout(function () {
-    // Hide the loader and display the content
-    document.querySelector('.loader-container').classList.remove('active');
-  }, 2000); // Adjust the delay time as needed
-});

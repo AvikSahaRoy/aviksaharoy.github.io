@@ -14,11 +14,18 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="./style.css">
-
-
 </head>
 
-<body>
+<body onload="removeLoader();">
+
+  <!-- Loading animation here -->
+  <div id="loader">
+    <div class="circle">
+    </div>
+    <p id="loader-content"></p>
+  </div>
+
+  <!-- Go to top button -->
   <div class="scroll-up-btn">
     <i class="fas fa-angle-up"></i>
   </div>
@@ -70,9 +77,6 @@
     <div class="max-width">
       <h2 class="title">About Me</h2>
       <div class="about-content">
-        <div class="column left">
-          <img src="Images/Avik.jpg" alt="Profile Image 626x626">
-        </div>
         <div class="column right">
           <div class="text">I'm <span class="typing-2"></span></div>
           <p>
@@ -81,51 +85,22 @@
             understanding of both front-end and back-end technologies. My proficiency in Java, alongside my full stack
             skills, enables me to create robust software from inception to deployment. Committed to delivering
             excellence through continuous learning and innovation.
-            <!-- I am Oracle Certified Java Programmer.
-            As a skilled programmer with a passion for developing innovative solutions, I am constantly seeking new
-            challenges to grow my career. I have also completed multiple certification courses in programming languages
-            such as JAVA
-            and Python, and in front-end development etc and I have also achieved the Oracle Certified Associate, Java
-            SE 8 Programmer certification. I am eager to explore opportunities to contribute to the growth of an
-            organization while being mentored towards a successful career. -->
           </p>
           <br>
-          <div class="text">My Qualification</div>
-          <p>
-          <ul style="list-style-type: square;">
-            <li>
-              <strong>Master of Computer Application (MCA)</strong> <br>
-              <span class="eduDetails">
-                Siliguri Institute of Technology (June 2023) <br>
-                CGPA - 9.43
-              </span>
-            </li>
-            <li>
-              <strong>Bachelor of Computer Application (BCA)</strong> <br>
-              <span class="eduDetails">
-                Siliguri Institute of Technology (June 2021) <br>
-                DGPA - 8.52
-              </span>
-            </li>
-            <li>
-              <strong>Higher Secondary (12th)</strong> <br>
-              <span class="eduDetails">
-                Falakata High School (May 2018) <br>
-                Percentage - 76.6%
-              </span>
-            </li>
-            <li>
-              <strong>Secondary (10th)</strong> <br>
-              <span class="eduDetails">
-                Falakata High School (May 2016) <br>
-                Percentage - 67.7%
-              </span>
-            </li>
-          </ul>
-
-          </p>
-
-          <!-- <a href="#" target="blank">Download CV</a> -->
+          <div class="hovertext-container">
+            <div class="text hovertext-p1">My Qualification</div>
+            <div class="text hovertext-p2">My Journey</div>
+          </div>
+          <div class="educontainer">
+            <h1 class="eduText">&nbsp; 2023 &nbsp;&nbsp;&nbsp;&nbsp;Master of Computer Application<span
+                class="name">&nbsp; 2023 &nbsp;&nbsp;&nbsp;&nbsp;Siliguri Institute of Technology</span></h1>
+            <h1 class="eduText">&nbsp; 2021 &nbsp;&nbsp;&nbsp;&nbsp; Bachelor of Computer Application<span
+                class="name">&nbsp; 2021 &nbsp;&nbsp;&nbsp;&nbsp; Siliguri Institute of Technology</span></h1>
+            <h1 class="eduText">&nbsp; 2018 &nbsp;&nbsp;&nbsp;&nbsp; Higher Secondary (12th)<span class="name">&nbsp;
+                2018 &nbsp;&nbsp;&nbsp;&nbsp; Falakata High School</span></h1>
+            <h1 class="eduText">&nbsp; 2016 &nbsp;&nbsp;&nbsp;&nbsp; Secondary (10th)<span class="name">&nbsp; 2016
+                &nbsp;&nbsp;&nbsp;&nbsp; Falakata High School</span></h1>
+          </div>
         </div>
       </div>
     </div>
@@ -137,34 +112,45 @@
     <div class="max-width">
       <h2 class="title">My Services</h2>
       <div class="serv-content">
-        <div class="card">
-          <div class="box">
-            <i class="fas fa-laptop-code"></i>
-            <div class="text">Web Design</div>
-            <p style="padding-bottom: 25px;">
-              Transform your vision into a visually stunning online reality with our expert web design, blending
-              aesthetics and user experience seamlessly.
-            </p>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="fas fa-laptop-code"></i>
+              <div class="text">Web Design</div>
+            </div>
+            <div class="flip-card-back">
+              <p>Transform your vision into a visually stunning online reality with our expert web design, blending
+                aesthetics and user experience seamlessly.</p>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="box">
-            <i class="fas fa-code"></i>
-            <div class="text">Web Development</div>
-            <p>
-              Drive digital innovation and functionality with our web development services, creating dynamic, custom
-              solutions tailored to your business goals.
-            </p>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="fas fa-code"></i>
+              <div class="text">Web Development</div>
+            </div>
+            <div class="flip-card-back">
+              <p>Drive digital innovation and functionality with our web development services, creating dynamic, custom
+                solutions tailored to your business goals.</p>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="box">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <div class="text">Creative Design</div>
-            <p>
-              Ignite your brand's personality through our creative design services, where every visual element is
-              meticulously crafted to captivate and engage your audience.
-            </p>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <div class="text">Creative Design</div>
+            </div>
+            <div class="flip-card-back">
+              <p>
+                Ignite your brand's personality through our creative design services, where every visual element is
+                meticulously crafted to captivate and engage your audience.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -179,21 +165,9 @@
       <div class="skills-content">
         <div class="column left">
 
-          <!-- <div class="text">PROJECTS</div>
-          <p>
-            <li class="project">E-commerce Website (HTML, CSS, Bootstrap, JavaScript, Java, JSP, MySQL)</li>
-            <li class="project">Real-Time Weather App (React, OpenWeatherMap API)</li>
-            <li class="project">Note-Taking App (React)</li>
-            <li class="project">Resume Generator (React)</li>
-            <li class="project">Portfolio Website (HTML, CSS, Bootstrap, JavaScript)</li>
-            <li class="project">Library Management System (HTML, CSS, Bootstrap, JavaScript, MySQL, PHP)</li>
-            <li class="project">Dashboard using Power Bi (Power BI Desktop App)</li>
-          </p>
-          <br> -->
-
           <div class="proIcons">
             <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-css3"></i>
             <i class="fa-brands fa-square-js"></i>
             <i class="fa-brands fa-bootstrap"></i>
             <i class="fa-brands fa-react"></i>
@@ -203,25 +177,30 @@
             <i class="fa-solid fa-c"></i>
             <i class="fa-solid fa-database"></i>
             <i class="fa-brands fa-git-alt"></i>
-            <i class="fa-brands fa-square-github"></i>
+            <i class="fa-brands fa-github"></i>
             <i class="fa-brands fa-npm"></i>
             <i class="fa-solid fa-code"></i>
-            <i class="fa-solid fa-bug-slash"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-brands fa-node"></i>
           </div>
-
-          <!-- <div class="text">DEVELOPMENT SKILLS</div>
-          <p>
-            I'm familiar & work on a daily basis with HTML, CSS, JavaScript, Bootstrap, React js and other modern frameworks.
-          </p> -->
 
         </div>
         <div class="column right">
 
-          <div class="text">SKILLS</div>
+          <div class="hovertext-container">
+            <div class="text hovertext-p1">SKILLS</div>
+            <div class="text hovertext-p2"> WHAT I KNOW</div>
+          </div>
+
+          <!-- <div class="text">SKILLS</div> -->
           <p>HTML, CSS, JavaScript, Bootstrap, React, Java, Python, Spring Boot, MySQL, Postman</p>
           <br>
 
-          <div class="text">CERTIFICATION COURSES</div>
+          <div class="hovertext-container">
+            <div class="text hovertext-p1">CERTIFICATION COURSES</div>
+            <div class="text hovertext-p2">PERFORMANCE</div>
+          </div>
+          <!-- <div class="text">CERTIFICATION COURSES</div> -->
           <p>
           <ul>
             <li class="project">Certified as an Oracle Certified Associate, Java SE 8 Programmer (1Z0-808).</li>
@@ -230,8 +209,11 @@
           </ul>
           </p>
           <br>
-
-          <div class="text">ACHIEVEMENTS</div>
+          <div class="hovertext-container">
+            <div class="text hovertext-p1">ACHIEVEMENTS</div>
+            <div class="text hovertext-p2">AWARD</div>
+          </div>
+          <!-- <div class="text">ACHIEVEMENTS</div> -->
           <p>
           <ul>
             <li class="project">Obtained an 83.9% score on the Oracle Certified Associate, Java SE 8 Programmer exam
@@ -245,24 +227,7 @@
           </p>
           <br>
         </div>
-
       </div>
-
-      <!-- <div class="Proicons">
-        <i class="fa-brands fa-html5"></i>
-        <i class="fa-brands fa-css3-alt"></i>
-        <i class="fa-brands fa-square-js"></i>
-        <i class="fa-brands fa-bootstrap"></i>
-        <i class="fa-brands fa-react"></i>
-        <i class="fa-brands fa-java"></i>
-        <i class="fa-solid fa-leaf"></i>
-        <i class="fa-brands fa-python"></i>
-        <i class="fa-solid fa-c"></i>
-        <i class="fa-solid fa-database"></i>
-        <i class="fa-brands fa-square-github"></i>
-        <i class="fa-brands fa-npm"></i>
-      </div> -->
-
     </div>
   </section>
 
@@ -271,7 +236,6 @@
     <div class="max-width">
       <h2 class="title">My Projects</h2>
       <div class="carousel owl-carousel">
-
         <div class="card">
           <div class="box">
             <img src="Images/Ecommerce.png" alt="">
@@ -296,9 +260,8 @@
             <div class="text">Library Management System</div>
             <p>
               <b>Technologies used:</b> HTML, CSS, Bootstrap, JavaScript, MySQL, PHP <br><br>
-              The Library Management System is a computerized system for the daily operations of a library. The admin
-              can manage the system by adding new books, viewing books, issuing and returning books. The system also
-              maintains students and book records.
+              The Library Management System automates admin tasks like adding/viewing books, managing records,
+              issuing/returning books, and maintaining student information.
             </p>
             <div class="button-area">
               <a href="#" target="_blank"><i class="fa-solid fa-eye"></i></a>
@@ -330,7 +293,8 @@
             <div class="text">Real-Time Weather App</div>
             <p>
               <b>Technologies used:</b> React, OpenWeatherMap API <br><br>
-              My Weather App provides real-time weather information and forecasts for multiple locations.
+              Designed and implemented an intuitive Weather Website, delivering real-time weather information and
+              forecasts for diverse locations, demonstrating expertise in web development.
             </p>
             <div class="button-area">
               <a href="https://weathernows.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
@@ -363,7 +327,7 @@
             <p>
               <b>Technologies used:</b> React <br><br>
               The Resume Generator is a web application built using React, designed to streamline the process of
-              creating professional resumes.
+              creating professional resumes and user-centric design.
             </p>
             <div class="button-area">
               <a href="https://resumemake.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
@@ -382,83 +346,51 @@
       <h2 class="title">Contact Me</h2>
       <div class="contact-content">
         <div class="column left">
-          <div class="text">Get in Touch</div>
-          <p>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or
-            opportunities to be a part of your visions. Email me with any questions or inquiries. I'll happy to answer
-            your questions.</p>
-          <div class="icons">
-
-            <div class="row">
-              <i class="fa-solid fa-location-dot"></i>
-              <div class="info">
-                <div class="head">&nbsp;<b>Address</b></div>
-                <div class="sub-title">&nbsp;Falakata, West Bengal, India</div>
-              </div>
-            </div>
-
-            <div class="row">
-              <i class="fa-solid fa-envelope"></i>
-              <div class="info">
-                <div class="head"><b>Email</b></div>
-                <div class="sub-title">
-                  royavik63@gmail.com</a></div>
-              </div>
-            </div>
-
-            <div>
-              <h1 id="blink">Connect with me on <i class="fa-regular fa-hand-point-down"></i></h1>
-            </div>
-
-            <br>
-
-            <!-- Social -->
-            <div class="social-menu">
-              <ul>
-                <li><a href="https://github.com/aviksaharoy" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/aviksaharoy/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                </li>
-                <li><a href="https://www.instagram.com/aviksaharoy___/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                </li>
-                <li><a href="https://www.facebook.com/profile.php?id=100049670839674&mibextid=ZbWKwL" target="_blank"><i
-                      class="fa-brands fa-facebook"></i></a>
-                </li>
-              </ul>
-            </div>
-
+          <div class="hovertext-container">
+            <div class="text hovertext-p1">Message Me <i class="fa-solid fa-paper-plane"></i></div>
+            <div class="text hovertext-p2">100% chance I will reply</div>
           </div>
-        </div>
-
-        <!-- Reach -->
-        <div class="column right">
-          <div class="text">Message me</div>
-          <form action="mailto:royavik63@gmail.com" method="post" enctype="text/plain">
-            <div class="fields">
-              <div class="field name">
-                <input type="text" name="Name" placeholder="Your Name" required>
-              </div>
-              <div class="field email">
-                <input type="email" name="Email" placeholder="Your Email" required>
-              </div>
-            </div>
-            <div class="field">
-              <input type="text" name="Subject" placeholder="Subject" required>
-            </div>
-            <div class="field textarea">
-              <textarea cols="30" rows="10" name="Message" placeholder="Message.." required></textarea>
-            </div>
-            <div class="button-area">
-              <button type="submit" value="Send">Send message</button>
-            </div>
-          </form>
+          <p>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or
+            opportunities to be a part of your visions. Email me with any questions. I'll happy to answer
+            your questions.
+          </p>
         </div>
       </div>
+      <div class="cards-list">
+        <div class="card_title title-white">
+          <p><i class="fa-solid fa-envelope"></i>&nbsp; royavik63@gmail.com</p>
+        </div>
+        <!-- <div class="card_title">
+          <p><i class="fa-solid fa-mobile-screen-button"></i> +91 1234567890</p>
+        </div> -->
+        <div class="card_title title-black">
+          <p><i class="fa-solid fa-location-dot"></i>&nbsp; Falakata, West Bengal, India</p>
+        </div>
+      </div>
+      <div class="social-menus">
+        <ul>
+          <li><a href="https://github.com/aviksaharoy" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </li>
+          <li><a href="https://www.linkedin.com/in/aviksaharoy/" target="_blank"><i
+                class="fa-brands fa-linkedin-in"></i></a>
+          </li>
+          <li><a href="https://www.instagram.com/aviksaharoy___/" target="_blank"><i
+                class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li><a href="https://www.facebook.com/profile.php?id=100049670839674&mibextid=ZbWKwL" target="_blank"><i
+                class="fa-brands fa-facebook"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="blinkDiv">
+        <h1 id="blink">Connect with me on <i class="fa-regular fa-hand-pointer"></i></h1>
+      </div>
+    </div>
     </div>
   </section>
 
-  <!-- Page load animation -->
-  <div class="loader-container">
-    <div class="loader"></div>
-  </div>
+
+
 
   <!-- Footer -->
   <footer>
@@ -466,7 +398,7 @@
       <!-- – Thanks for visiting! – <br> -->
       Made With
       <span style="color: rgb(255, 115, 0);">❤</span>
-      by Avik Saha Roy <br> <span class="far fa-copyright"></span> 2023 All Rights Reserved
+      by Avik Saha Roy <br> <span class="far fa-copyright"></span> 2024 All Rights Reserved
     </span>
   </footer>
 
