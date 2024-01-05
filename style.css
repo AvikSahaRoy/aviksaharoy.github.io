@@ -629,6 +629,17 @@ section .title::after {
     align-items: center;
 }
 
+.proIcons span {
+    padding: 10px 45px 40px 45px;
+    margin: 0 10px 0 10px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .proIcons i:hover {
     /* color: #fff; */
@@ -1092,6 +1103,19 @@ footer span a:hover {
         font-size: 26px;
         padding: 30px;
     }
+
+    .proIcons span {
+        padding: 0 30px 0 30px;
+        margin: 0 10px 0 10px;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    }
+    
 
     .about .about-content .right .educontainer .eduText {
         font-size: 15px;
