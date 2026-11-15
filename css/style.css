@@ -2571,6 +2571,15 @@ kbd {
         text-align: left;
     }
 
+    /* Contact "HELLO": % offset pushes it under the footer on tall mobile/tablet sections */
+    .contact {
+        padding-bottom: calc(max(6rem, 22vw) + 40px);
+    }
+
+    .contact .bg-word {
+        bottom: 12px;
+    }
+
     .hero__visual {
         order: -1;
         margin-bottom: 8px;
@@ -2611,6 +2620,11 @@ kbd {
 }
 
 @media (max-width: 860px) {
+    /* Links are in the burger menu now, so there is room for the name again */
+    .nav__name {
+        display: inline;
+    }
+
     .nav__links,
     .nav__cta {
         display: none;
