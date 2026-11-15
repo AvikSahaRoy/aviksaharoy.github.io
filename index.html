@@ -2,536 +2,796 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avik Saha Roy | Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css'>
-  <link rel='stylesheet'
-    href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&amp;family=Poppins:wght@100;300;400;500;600;700;800;900&amp;family=Ubuntu:wght@300;400;500;700&amp;display=swap"rel="stylesheet'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <link rel="stylesheet" href="./style.css">
+  <title>Avik Saha Roy | Full Stack Developer</title>
+  <meta name="description"
+    content="Avik Saha Roy - Full Stack Developer with nearly 3 years of experience building web and mobile apps with React.js, Next.js, TypeScript, React Native, Node.js, NestJS, PostgreSQL, MongoDB and Redis.">
+  <meta name="theme-color" content="#0b0a09">
+  <meta property="og:title" content="Avik Saha Roy | Full Stack Developer">
+  <meta property="og:description" content="I build fast web and mobile apps, from idea to production.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aviksaharoy.github.io/">
+  <meta property="og:image" content="https://aviksaharoy.github.io/assets/images/social/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Avik Saha Roy - Full Stack Developer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Avik Saha Roy | Full Stack Developer">
+  <meta name="twitter:description" content="I build fast web and mobile apps, from idea to production.">
+  <meta name="twitter:image" content="https://aviksaharoy.github.io/assets/images/social/og-cover.jpg">
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body onload="removeLoader();">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Loading animation here -->
-  <div id="loader">
-    <div class="circle">
+  <!-- Decorative layers -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo" aria-label="Avik Saha Roy, home">
+        <span class="nav__mono">A</span>
+        <span class="nav__name">Avik Saha Roy</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Learning</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav__cmd" id="cmdOpen" type="button" aria-label="Open command menu (Ctrl + K)">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <kbd id="cmdKey">Ctrl K</kbd>
+      </button>
+      <a href="#contact" class="btn btn--small btn--primary nav__cta magnetic">Let's talk</a>
+      <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
     </div>
-    <p id="loader-content"></p>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul>
+      <li style="--i:0"><a href="#about"><span>01</span>About</a></li>
+      <li style="--i:1"><a href="#experience"><span>02</span>Experience</a></li>
+      <li style="--i:2"><a href="#services"><span>03</span>Services</a></li>
+      <li style="--i:3"><a href="#skills"><span>04</span>Skills</a></li>
+      <li style="--i:4"><a href="#projects"><span>05</span>Projects</a></li>
+      <li style="--i:5"><a href="#certifications"><span>06</span>Learning</a></li>
+      <li style="--i:6"><a href="#contact"><span>07</span>Contact</a></li>
+    </ul>
+    <a class="mobile-menu__mail" href="mailto:royavik63@gmail.com">royavik63@gmail.com</a>
   </div>
 
-  <!-- Go to top button -->
-  <div class="scroll-up-btn">
-    <i class="fas fa-angle-up"></i>
-  </div>
+  <main id="main">
 
-  <!-- Header -->
-  <nav class="navbar">
-    <div class="max-width">
-      <div class="logo"><a href=""><span>AvikSahaRoy</span></a></div>
-      <ul class="menu">
-        <li>
-          <div class="darkModeButton" style="
-            display: flex; justify-content: center; align-items: center;
-            ">
-            <input type="checkbox" class="checkbox" id="checkbox">
-            <label for="checkbox" class="checkbox-label">
-              <i class="fas fa-moon"></i>
-              <i class="fas fa-sun"></i>
-              <span class="ball"></span>
-            </label>
-          </div>
-        </li>
-        <li><a href="#home" class="menu-btn"><strong>HOME</strong></a></li>
-        <li><a href="#about" class="menu-btn"><strong>ABOUT</strong></a></li>
-        <li><a href="#services" class="menu-btn"><strong>SERVICES</strong></a></li>
-        <li><a href="#skills" class="menu-btn"><strong>SKILLS</strong></a></li>
-        <li><a href="#projects" class="menu-btn"><strong>PROJECTS</strong></a></li>
-        <li><a href="#contact" class="menu-btn"><strong>CONTACT</strong></a></li>
-      </ul>
-      <div class="menu-btn">
-        <i class="fas fa-bars"></i>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="blob blob--1"></div>
+        <div class="blob blob--2"></div>
+        <div class="hero__grid"></div>
       </div>
-    </div>
-  </nav>
 
-  <!-- Home -->
-  <section class="home" id="home">
-    <div class="max-width">
-      <div class="home-content">
-        <div class="text-1">👋 Hello, My Name is</div>
-        <div class="text-2">Avik Saha Roy</div>
-        <div class="text-3">And I'm a <span class="typing"></span></div>
-        <!-- <a href="#">Hire me</a> -->
-      </div>
-    </div>
-  </section>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow load" style="--d:.1s"><span class="pulse"></span> Full Stack Developer · India</p>
 
-  <!--  About  -->
-  <section class="about" id="about">
-    <div class="max-width">
-      <h2 class="title">About Me</h2>
-      <div class="about-content">
-        <div class="column right">
-          <div class="text">I'm <span class="typing-2"></span></div>
-          <p>
-            I am a Full Stack Developer and Oracle Certified Java Programmer with a strong background in web application
-            development and Java programming. I thrive on crafting elegant, user-friendly solutions and possess a deep
-            understanding of both front-end and back-end technologies. My proficiency in Java, alongside my full stack
-            skills, enables me to create robust software from inception to deployment. Committed to delivering
-            excellence through continuous learning and innovation.
+          <h1 class="hero__title">
+            <span class="line"><span class="load-up" style="--d:.2s">Avik Saha</span></span>
+            <span class="line"><span class="load-up" style="--d:.32s"><em>Roy</em><span class="accent">.</span></span></span>
+          </h1>
+
+          <p class="hero__role load" style="--d:.5s">
+            I'm a <span class="typed" id="typed" aria-live="polite">Full Stack Developer</span><span class="caret" aria-hidden="true"></span>
           </p>
-          <br>
-          <div class="hovertext-container">
-            <div class="text hovertext-p1">My Qualification</div>
-            <div class="text hovertext-p2">My Journey</div>
-          </div>
-          <div class="educontainer">
-            <h1 class="eduText">&nbsp; 2023 &nbsp;&nbsp;&nbsp;&nbsp;Master of Computer Application<span
-                class="name">&nbsp; 2023 &nbsp;&nbsp;&nbsp;&nbsp;Siliguri Institute of Technology</span></h1>
-            <h1 class="eduText">&nbsp; 2021 &nbsp;&nbsp;&nbsp;&nbsp; Bachelor of Computer Application<span
-                class="name">&nbsp; 2021 &nbsp;&nbsp;&nbsp;&nbsp; Siliguri Institute of Technology</span></h1>
-            <h1 class="eduText">&nbsp; 2018 &nbsp;&nbsp;&nbsp;&nbsp; Higher Secondary (12th)<span class="name">&nbsp;
-                2018 &nbsp;&nbsp;&nbsp;&nbsp; Falakata High School</span></h1>
-            <h1 class="eduText">&nbsp; 2016 &nbsp;&nbsp;&nbsp;&nbsp; Secondary (10th)<span class="name">&nbsp; 2016
-                &nbsp;&nbsp;&nbsp;&nbsp; Falakata High School</span></h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
+          <p class="hero__lead load" style="--d:.6s">
+            I build fast websites and mobile apps from end to end, with clean code, smooth UX, and stable
+            production releases.
+          </p>
 
-  <!-- Services -->
-  <section class="services" id="services">
-    <div class="max-width">
-      <h2 class="title">My Services</h2>
-      <div class="serv-content">
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <i class="fas fa-laptop-code"></i>
-              <div class="text">Web Design</div>
-            </div>
-            <div class="flip-card-back">
-              <p>Transform your vision into a visually stunning online reality with our expert web design, blending
-                aesthetics and user experience seamlessly.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <i class="fas fa-code"></i>
-              <div class="text">Web Development</div>
-            </div>
-            <div class="flip-card-back">
-              <p>Drive digital innovation and functionality with our web development services, creating dynamic, custom
-                solutions tailored to your business goals.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-              <div class="text">Creative Design</div>
-            </div>
-            <div class="flip-card-back">
-              <p>
-                Ignite your brand's personality through our creative design services, where every visual element is
-                meticulously crafted to captivate and engage your audience.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Skills -->
-  <section class="skills" id="skills">
-    <div class="max-width">
-      <h2 class="title">My Skills</h2>
-      <div class="skills-content">
-        <div class="column left">
-
-          <!-- <div class="proIcons">
-            <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-css3"></i>
-            <i class="fa-brands fa-square-js"></i>
-            <i class="fa-brands fa-bootstrap"></i>
-            <i class="fa-brands fa-react"></i>
-            <i class="fa-brands fa-java"></i>
-            <i class="fa-solid fa-leaf"></i>
-            <i class="fa-brands fa-python"></i>
-            <i class="fa-solid fa-c"></i>
-            <i class="fa-solid fa-database"></i>
-            <i class="fa-brands fa-git-alt"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-npm"></i>
-            <i class="fa-solid fa-code"></i>
-            <i class="fa-solid fa-bug"></i>
-            <i class="fa-brands fa-node"></i>
-          </div> -->
-
-          <div class="proIcons">
-            <div>
-              <i class="fa-brands fa-html5"></i>
-              <span>HTML</span>
-            </div>
-            <div>
-              <i class="fa-brands fa-css3"></i>
-              <span>CSS</span>
-            </div>
-            <div>
-              <i class="fa-brands fa-square-js"></i>
-              <span>JavaScript</span>
-            </div>
-            <div>
-              <i class="fa-brands fa-bootstrap"></i>
-              <span>Bootstrap</span>
-            </div>
-            <div>
-              <i class="fa-brands fa-react"></i>
-              <span>React</span>
-            </div>
-            <div>
-              <i class="fa-brands fa-java"></i>
-              <span>Java</span>
-            </div>
-            <div>
-              <i class="fa-solid fa-leaf"></i>
-              <span>SpringBoot</span>
-            </div>
-            <div>
-              <i class="fa-brands fa-python"></i>
-              <span>Python</span>
-            </div>
-            <div>
-              <i class="fa-solid fa-c"></i>
-              <span>C</span>
-            </div>
-            <div>
-              <i class="fa-solid fa-database"></i>
-              <span>Database</span>
-            </div>
-            <div>
-              <i class="fa-brands fa-git-alt"></i>
-              <span>Git</span>
-            </div>
-            <div>
-              <i class="fa-brands fa-npm"></i>
-              <span>NPM</span>
-            </div>
+          <div class="hero__actions load" style="--d:.7s">
+            <a href="#projects" class="btn btn--primary magnetic">View my work <i class="fa-solid fa-arrow-down"></i></a>
+            <a href="#contact" class="btn btn--ghost magnetic">Get in touch</a>
           </div>
 
-
-        </div>
-        <div class="column right">
-
-          <div class="hovertext-container">
-            <div class="text hovertext-p1">SKILLS</div>
-            <div class="text hovertext-p2"> WHAT I KNOW</div>
-          </div>
-
-          <!-- <div class="text">SKILLS</div> -->
-          <p>HTML, CSS, JavaScript, Bootstrap, React, Java, Python, Spring Boot, MySQL, Postman</p>
-          <br>
-
-          <div class="hovertext-container">
-            <div class="text hovertext-p1">CERTIFICATION COURSES</div>
-            <div class="text hovertext-p2">PERFORMANCE</div>
-          </div>
-          <!-- <div class="text">CERTIFICATION COURSES</div> -->
-          <p>
-          <ul>
-            <li class="project">Certified as an Oracle Certified Associate, Java SE 8 Programmer (1Z0-808).</li>
-            <li class="project">NPTEL Courses - C, Speaking Effectively, Cloud Computing</li>
-            <li class="project">Front End Development, Python, JavaScript, React</li>
+          <ul class="hero__stats load" style="--d:.85s">
+            <li><strong><span data-count="3">0</span><sup>yrs</sup></strong><span>Nearly 3 years experience</span></li>
+            <li><strong><span data-count="30">0</span>+</strong><span>Reusable UI components</span></li>
+            <li><strong>~<span data-count="30">0</span>%</strong><span>Faster feature delivery</span></li>
           </ul>
-          </p>
-          <br>
-          <div class="hovertext-container">
-            <div class="text hovertext-p1">ACHIEVEMENTS</div>
-            <div class="text hovertext-p2">AWARD</div>
+        </div>
+
+        <div class="hero__visual load" style="--d:.4s">
+          <div class="portrait tilt">
+            <svg class="orbit" viewBox="0 0 400 400" aria-hidden="true">
+              <circle cx="200" cy="200" r="190" />
+              <circle cx="200" cy="200" r="160" class="orbit__inner" />
+            </svg>
+            <div class="orbit-icons" aria-hidden="true">
+              <span style="--a:0deg"><i class="devicon-react-original"></i></span>
+              <span style="--a:90deg"><i class="devicon-nextjs-plain"></i></span>
+              <span style="--a:180deg"><i class="devicon-nestjs-original"></i></span>
+              <span style="--a:270deg"><i class="devicon-postgresql-plain"></i></span>
+            </div>
+            <div class="portrait__frame" aria-hidden="true"></div>
+            <img class="portrait__cutout" src="assets/images/profile/avik-cutout.webp" alt="Portrait of Avik Saha Roy"
+              width="445" height="561" fetchpriority="high">
+            <div class="code-chip" aria-hidden="true">
+              <span class="c-key">const</span> avik = {<br>
+              &nbsp;&nbsp;stack: <span class="c-str">'full'</span>,<br>
+              &nbsp;&nbsp;ships: <span class="c-bool">true</span><br>
+              }
+            </div>
           </div>
-          <!-- <div class="text">ACHIEVEMENTS</div> -->
-          <p>
-          <ul>
-            <li class="project">Obtained an 83.9% score on the Oracle Certified Associate, Java SE 8 Programmer exam
-              (1Z0-808).
-            </li>
-            <li class="project">Won the 2nd runners up in the ExQuizIT-2022 (Exclusive Quiz in Information Technology)
-              competition
-              organized by the Department of Computer Application at SIT, showcasing knowledge and expertise in
-              various IT topics.</li>
-          </ul>
-          </p>
-          <br>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Projects -->
-  <section class="projects" id="projects">
-    <div class="max-width">
-      <h2 class="title">My Projects</h2>
-      <div class="carousel owl-carousel">
-        <div class="card">
-          <div class="box">
-            <img src="Images/Ecommerce.png" alt="">
-            <div class="text">Ecommerce Website</div>
-            <p>
-              <b>Technologies used:</b> HTML, CSS, Bootstrap, JavaScript, JAVA, JSP, MySQL <br><br>
-              The ecommerce website is responsive and optimized for all devices. Customers can use filters to find
-              products and easily add/remove items from their cart. Checkout process is simple with multiple payment
-              and shipping options.
-            </p>
-            <div class="button-area">
-              <a href="#" target="_blank"><i class="fa-solid fa-eye"></i></a>
-              <a href="https://github.com/AvikSahaRoy/E-commerce-Website" target="_blank"><i
-                  class="bi bi-github"></i></a>
-            </div>
-          </div>
-        </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About">
+        <span></span>
+      </a>
+    </section>
 
-        <div class="card">
-          <div class="box">
-            <img src="Images/Library management system.png" alt="">
-            <div class="text">Library Management System</div>
-            <p>
-              <b>Technologies used:</b> HTML, CSS, Bootstrap, JavaScript, MySQL, PHP <br><br>
-              The Library Management System automates admin tasks like adding/viewing books, managing records,
-              issuing/returning books, and maintaining student information.
-            </p>
-            <div class="button-area">
-              <a href="#" target="_blank"><i class="fa-solid fa-eye"></i></a>
-              <a href="#" target="_blank"><i class="bi bi-github"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <img src="Images/PowerBi.jpg" alt="">
-            <div class="text">Dashboard using Power Bi</div>
-            <p>
-              <b>Tools Used:</b> Power BI Desktop <br><br>
-              Bring large real life data set with Power BI! Our advanced dashboard creation tools allow you to
-              transform complex data into visually appealing and interactive displays.
-            </p>
-            <div class="button-area">
-              <a href="#" target="_blank"><i class="fa-solid fa-eye"></i></a>
-              <a href="https://github.com/AvikSahaRoy/Creating-Dashboard-Using-Power-BI" target="_blank"><i
-                  class="bi bi-github"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <img src="Images/WeatherApp.png" alt="">
-            <div class="text">Real-Time Weather App</div>
-            <p>
-              <b>Technologies used:</b> React, OpenWeatherMap API <br><br>
-              Designed and implemented an intuitive Weather Website, delivering real-time weather information and
-              forecasts for diverse locations, demonstrating expertise in web development.
-            </p>
-            <div class="button-area">
-              <a href="https://weathernows.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
-              <a href="https://github.com/AvikSahaRoy/weathernows.github.io" target="_blank"><i
-                  class="bi bi-github"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <img src="Images/NoteApp.jpg" alt="">
-            <div class="text">Note-Taking App</div>
-            <p>
-              <b>Technologies used:</b> React <br><br>
-              A simple notes website built with React that allows users to create, edit, and delete notes. Uses React
-              components to create a dynamic and interactive user interface and store notes into local storage.
-            </p>
-            <div class="button-area">
-              <a href="https://quicksnotes.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
-              <a href="https://github.com/AvikSahaRoy/Notes-App-React" target="_blank"><i class="bi bi-github"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <img src="Images/ResumeMake.png" alt="">
-            <div class="text">ResumeMake App</div>
-            <p>
-              <b>Technologies used:</b> React <br><br>
-              The Resume Generator is a web application built using React, designed to streamline the process of
-              creating professional resumes and user-centric design.
-            </p>
-            <div class="button-area">
-              <a href="https://resumemake.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
-              <a href="https://github.com/AvikSahaRoy/Resume-Generator" target="_blank"><i class="bi bi-github"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <img src="Images/QR-Code-Generator.jpg" alt="">
-            <div class="text">QR Code Generator</div>
-            <p>
-              <b>Technologies used:</b> HTML, CSS, JavaScript <br><br>
-              Create QR codes instantly by entering text or a URL with our versatile QR Code Generator. Enjoy a
-              seamless experience with the added convenience of dark mode for easy use in any lighting environment.
-            </p>
-            <div class="button-area">
-              <a href="https://qrwave.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
-              <a href="https://github.com/AvikSahaRoy/QR-Code-Generator" target="_blank"><i
-                  class="bi bi-github"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <img src="Images/Notepad.jpg" alt="">
-            <div class="text">Notepad</div>
-            <p>
-              <b>Technologies used:</b> HTML, CSS, JavaScript and Bootstrap <br><br>
-              Take secure and privacy-focused notes in our notepad, seamlessly saved to your browser's localStorage.
-              Enjoy dark mode, instant loading – all in a light-weight, open-source package.
-            </p>
-            <div class="button-area">
-              <a href="https://noteswave.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
-              <a href="https://github.com/AvikSahaRoy/Notepad" target="_blank"><i class="bi bi-github"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <img src="Images/Password Generator.png" alt="">
-            <div class="text">Password Generator and Password Strength Checker</div>
-            <p>
-              <b>Technologies used:</b> HTML, CSS, JavaScript and Bootstrap <br><br>
-              Generate strong, unique passwords and assess their strength instantly
-              with our user-friendly tool, ensuring your digital accounts safe and secure.
-            </p>
-            <div class="button-area">
-              <a href="https://passwordgeneratorchecker.netlify.app/" target="_blank"><i
-                  class="fa-solid fa-eye"></i></a>
-              <a href="https://github.com/AvikSahaRoy/Password-Generator-and-Strength-Checker" target="_blank"><i
-                  class="bi bi-github"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <img src="Images/Rock Paper Scissors Game.jpeg" alt="">
-            <div class="text">Rock Paper Scissors Game</div>
-            <p>
-              <b>Technologies used:</b> HTML, CSS, JavaScript and Bootstrap <br><br>
-              A classic game of Rock, Paper, Scissors where users can play against the
-              computer in a browser-based interface.
-            </p>
-            <div class="button-area">
-              <a href="https://rpcgames.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
-              <a href="https://github.com/AvikSahaRoy/Rock-Paper-Scissors-Game" target="_blank"><i
-                  class="bi bi-github"></i></a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <div class="max-width">
-      <h2 class="title">Contact Me</h2>
-      <div class="contact-content">
-        <div class="column left">
-          <div class="hovertext-container">
-            <div class="text hovertext-p1">Message Me <i class="fa-solid fa-paper-plane"></i></div>
-            <div class="text hovertext-p2">100% chance I will reply</div>
-          </div>
-          <p>
-            <!-- Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or
-            opportunities to be a part of your visions. Email me with any questions. I'll happy to answer
-            your questions. -->
-            Feel free to contact me for project discussions, creative ideas, or collaboration opportunities. Email me
-            with any questions. I'll happy to answer your questions.
-          </p>
-        </div>
-      </div>
-      <div class="cards-list">
-        <div class="card_title title-white">
-          <p><i class="fa-solid fa-envelope"></i>&nbsp; royavik63@gmail.com</p>
-        </div>
-        <!-- <div class="card_title">
-          <p><i class="fa-solid fa-mobile-screen-button"></i> +91 1234567890</p>
-        </div> -->
-        <div class="card_title title-black">
-          <p><i class="fa-solid fa-location-dot"></i>&nbsp; Falakata, West Bengal, India</p>
-        </div>
-      </div>
-      <div class="social-menus">
-        <ul>
-          <li><a href="https://github.com/aviksaharoy" target="_blank"><i class="fa-brands fa-github"></i></a>
-          </li>
-          <li><a href="https://www.linkedin.com/in/aviksaharoy/" target="_blank"><i
-                class="fa-brands fa-linkedin-in"></i></a>
-          </li>
-          <li><a href="https://www.instagram.com/aviksaharoy___/" target="_blank"><i
-                class="fa-brands fa-instagram"></i></a>
-          </li>
-          <li><a href="https://www.facebook.com/profile.php?id=100049670839674&mibextid=ZbWKwL" target="_blank"><i
-                class="fa-brands fa-facebook"></i></a>
-          </li>
+    <!-- Tech marquee -->
+    <div class="marquee" aria-label="Main technologies">
+      <div class="marquee__track">
+        <ul class="marquee__list">
+          <li><i class="devicon-react-original"></i>React.js</li>
+          <li><i class="devicon-nextjs-plain"></i>Next.js</li>
+          <li><i class="devicon-typescript-plain"></i>TypeScript</li>
+          <li><i class="devicon-react-original"></i>React Native</li>
+          <li><i class="devicon-nodejs-plain"></i>Node.js</li>
+          <li><i class="devicon-nestjs-original"></i>NestJS</li>
+          <li><i class="devicon-postgresql-plain"></i>PostgreSQL</li>
+          <li><i class="devicon-mongodb-plain"></i>MongoDB</li>
+          <li><i class="devicon-redis-plain"></i>Redis</li>
+          <li><i class="devicon-tailwindcss-original"></i>Tailwind CSS</li>
+          <li><i class="devicon-redux-original"></i>Redux Toolkit</li>
+          <li><i class="devicon-githubactions-plain"></i>GitHub Actions</li>
         </ul>
       </div>
-      <div class="blinkDiv">
-        <h1 id="blink">Connect with me on <i class="fa-regular fa-hand-pointer"></i></h1>
+    </div>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__num" data-reveal>01 — About</p>
+          <h2 class="section__title" data-split>From idea to <em>production</em>, end to end.</h2>
+        </header>
+
+        <div class="about">
+          <div class="about__text" data-reveal>
+            <p class="about__big">
+              I'm a Full Stack Developer with nearly 3 years of experience building websites and mobile apps.
+            </p>
+            <p>
+              I build fast, responsive web apps with React.js, Next.js and TypeScript, with a focus on reusable
+              components and SEO-friendly server-side rendering. I build cross-platform iOS and Android apps with
+              React Native and Expo, and scalable backends with Node.js, NestJS, PostgreSQL, MongoDB and Redis.
+            </p>
+            <p>
+              I enjoy turning client requirements into clean, maintainable features, and I care about stability in
+              production: secure authentication, real-time features, and CI/CD with GitHub Actions.
+            </p>
+
+            <ul class="facts">
+              <li data-reveal style="--d:.05s"><i class="fa-solid fa-location-dot"></i><span>Falakata, West Bengal</span></li>
+              <li data-reveal style="--d:.1s"><i class="fa-solid fa-briefcase"></i><span>Algoritmo Lab</span></li>
+              <li data-reveal style="--d:.15s"><i class="fa-brands fa-java"></i><span>Oracle Certified Java</span></li>
+            </ul>
+          </div>
+
+          <div class="edu" data-reveal style="--d:.15s">
+            <h3 class="card-label">Education</h3>
+            <ol class="edu__list">
+              <li>
+                <span class="edu__year">2021 – 2023</span>
+                <strong>Master of Computer Application</strong>
+                <span class="edu__place">Siliguri Institute of Technology</span>
+              </li>
+              <li>
+                <span class="edu__year">2018 – 2021</span>
+                <strong>Bachelor of Computer Application</strong>
+                <span class="edu__place">Siliguri Institute of Technology</span>
+              </li>
+              <li>
+                <span class="edu__year">2018</span>
+                <strong>Higher Secondary (12th)</strong>
+                <span class="edu__place">Falakata High School</span>
+              </li>
+              <li>
+                <span class="edu__year">2016</span>
+                <strong>Secondary (10th)</strong>
+                <span class="edu__place">Falakata High School</span>
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__num" data-reveal>02 — Experience</p>
+          <h2 class="section__title" data-split>Where I <em>build</em> every day.</h2>
+        </header>
+
+        <article class="job" data-reveal>
+          <div class="job__side">
+            <span class="job__date">March 2024 — Present</span>
+            <h3 class="job__role">Associate Software Engineer</h3>
+            <p class="job__company"><i class="fa-solid fa-building"></i> Algoritmo Lab</p>
+            <ul class="chips">
+              <li>React.js</li><li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li><li>Redux</li>
+              <li>React Native</li><li>Expo</li><li>Node.js</li><li>NestJS</li><li>PostgreSQL</li>
+              <li>MongoDB</li><li>Redis</li>
+            </ul>
+          </div>
+
+          <div class="job__main">
+            <div class="job__group" data-reveal style="--d:.05s">
+              <h4><i class="fa-solid fa-display"></i> Web</h4>
+              <ul>
+                <li>Delivered client projects and in-house products end to end: websites, web apps and mobile apps.
+                </li>
+                <li>Built fast, responsive apps with React.js, Next.js and TypeScript, and a library of
+                  <b>30+ reusable UI components</b> that cut feature development time by <b>about 30%</b>.</li>
+                <li>Improved search visibility with server-side rendering, dynamic routing, metadata and image
+                  optimization.</li>
+              </ul>
+            </div>
+            <div class="job__group" data-reveal style="--d:.1s">
+              <h4><i class="fa-solid fa-mobile-screen-button"></i> Mobile</h4>
+              <ul>
+                <li>Created cross-platform features for iOS and Android with React Native and Expo.</li>
+              </ul>
+            </div>
+            <div class="job__group" data-reveal style="--d:.15s">
+              <h4><i class="fa-solid fa-server"></i> Backend &amp; DevOps</h4>
+              <ul>
+                <li>Designed REST APIs with Node.js and NestJS, and data models in PostgreSQL (TypeORM, migrations)
+                  and MongoDB.</li>
+                <li>Secure authentication with JWT, OTP login and refresh tokens.</li>
+                <li>Redis caching and Bull job queues for faster APIs and background tasks.</li>
+                <li>CI/CD pipelines with GitHub Actions for automated builds and cloud deployments.</li>
+              </ul>
+            </div>
+            <div class="job__group" data-reveal style="--d:.2s">
+              <h4><i class="fa-solid fa-handshake"></i> Clients</h4>
+              <ul>
+                <li>Partnered with clients to turn business requirements into working features, across planning,
+                  development, testing, deployment and maintenance.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__num" data-reveal>03 — Services</p>
+          <h2 class="section__title" data-split>What I can <em>do</em> for you.</h2>
+        </header>
+
+        <div class="services">
+          <article class="service spotlight" data-reveal style="--d:0s">
+            <div class="service__media">
+              <img src="assets/images/services/web-development.webp" alt="Laptop showing a modern website with floating code, speed and search panels" width="1200" height="751" loading="lazy">
+            </div>
+            <span class="service__num">/01</span>
+            <div class="service__icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Web Development</h3>
+            <p>Fast, responsive and SEO-friendly websites and web apps with React.js, Next.js, TypeScript and
+              Tailwind CSS.</p>
+          </article>
+          <article class="service spotlight" data-reveal style="--d:.1s">
+            <div class="service__media">
+              <img src="assets/images/services/mobile-apps.webp" alt="Two smartphones showing a modern app interface with floating notification and like badges" width="1200" height="751" loading="lazy">
+            </div>
+            <span class="service__num">/02</span>
+            <div class="service__icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3>Mobile Apps</h3>
+            <p>Cross-platform iOS and Android apps with React Native, Expo and NativeWind, from first screen to
+              release.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section section--alt" id="skills">
+      <div class="bg-word" data-dir="right" aria-hidden="true">STACK</div>
+      <div class="container">
+        <header class="section__head">
+          <p class="section__num" data-reveal>04 — Skills</p>
+          <h2 class="section__title" data-split>Tools I <em>trust</em>.</h2>
+        </header>
+
+        <div class="bento">
+          <div class="bento__card bento__card--wide spotlight" data-reveal>
+            <h3 class="card-label"><i class="fa-solid fa-palette"></i> Frontend</h3>
+            <ul class="skill-list">
+              <li><i class="devicon-react-original colored"></i>React.js</li>
+              <li><i class="devicon-nextjs-plain"></i>Next.js</li>
+              <li><i class="devicon-typescript-plain colored"></i>TypeScript</li>
+              <li><i class="devicon-javascript-plain colored"></i>JavaScript</li>
+              <li><i class="devicon-redux-original colored"></i>Redux Toolkit</li>
+              <li><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</li>
+              <li><i class="fa-solid fa-cube"></i>shadcn/ui</li>
+              <li><i class="fa-solid fa-list-check"></i>React Hook Form</li>
+              <li><i class="fa-solid fa-shield-halved"></i>Zod</li>
+              <li><i class="devicon-sass-original colored"></i>SCSS</li>
+            </ul>
+          </div>
+
+          <div class="bento__card spotlight" data-reveal style="--d:.08s">
+            <h3 class="card-label"><i class="fa-solid fa-mobile-screen"></i> Mobile</h3>
+            <ul class="skill-list">
+              <li><i class="devicon-react-original colored"></i>React Native</li>
+              <li><i class="fa-solid fa-mobile"></i>Expo</li>
+              <li><i class="fa-solid fa-wind"></i>NativeWind</li>
+            </ul>
+          </div>
+
+          <div class="bento__card spotlight" data-reveal style="--d:.12s">
+            <h3 class="card-label"><i class="fa-solid fa-gears"></i> Backend</h3>
+            <ul class="skill-list">
+              <li><i class="devicon-nodejs-plain colored"></i>Node.js</li>
+              <li><i class="devicon-nestjs-original colored"></i>NestJS</li>
+              <li><i class="devicon-express-original"></i>Express.js</li>
+              <li><i class="fa-solid fa-plug"></i>REST APIs</li>
+              <li><i class="fa-solid fa-table"></i>TypeORM</li>
+            </ul>
+          </div>
+
+          <div class="bento__card spotlight" data-reveal style="--d:.16s">
+            <h3 class="card-label"><i class="fa-solid fa-database"></i> Databases</h3>
+            <ul class="skill-list">
+              <li><i class="devicon-postgresql-plain colored"></i>PostgreSQL</li>
+              <li><i class="devicon-mongodb-plain colored"></i>MongoDB</li>
+              <li><i class="devicon-redis-plain colored"></i>Redis</li>
+            </ul>
+          </div>
+
+          <div class="bento__card spotlight" data-reveal style="--d:.2s">
+            <h3 class="card-label"><i class="fa-solid fa-toolbox"></i> Tools</h3>
+            <ul class="skill-list">
+              <li><i class="devicon-git-plain colored"></i>Git</li>
+              <li><i class="devicon-github-original"></i>GitHub</li>
+              <li><i class="devicon-githubactions-plain colored"></i>GitHub Actions</li>
+              <li><i class="devicon-azure-plain colored"></i>Azure</li>
+              <li><i class="devicon-postman-plain colored"></i>Postman</li>
+              <li><i class="devicon-swagger-plain colored"></i>Swagger</li>
+            </ul>
+          </div>
+
+          <div class="bento__card spotlight" data-reveal style="--d:.24s">
+            <h3 class="card-label"><i class="fa-solid fa-code"></i> Languages</h3>
+            <ul class="skill-list">
+              <li><i class="devicon-java-plain colored"></i>Java</li>
+              <li><i class="devicon-python-plain colored"></i>Python</li>
+              <li><i class="devicon-c-plain colored"></i>C</li>
+            </ul>
+          </div>
+
+          <div class="bento__card bento__card--wide spotlight" data-reveal style="--d:.28s">
+            <h3 class="card-label"><i class="fa-solid fa-lightbulb"></i> Concepts</h3>
+            <ul class="chips chips--soft">
+              <li>UI/UX Principles</li><li>Responsive Design</li><li>SEO Optimization</li><li>API Integration</li>
+              <li>Authentication &amp; Authorization</li><li>State Management</li><li>Performance Optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
+      <div class="bg-word" data-dir="left" aria-hidden="true">WORK</div>
+      <div class="container">
+        <header class="section__head">
+          <p class="section__num" data-reveal>05 — Projects</p>
+          <h2 class="section__title" data-split>Selected <em>work</em>.</h2>
+        </header>
+
+        <div class="stack">
+          <!-- CurioBite -->
+          <article class="feature" style="--accent-p:#ff7300">
+            <div class="feature__body">
+              <span class="feature__tag">Web &amp; Mobile · Professional</span>
+              <h3>CurioBite</h3>
+              <p class="feature__sub">Student learning platform</p>
+              <ul class="feature__points">
+                <li>Mobile app (iOS &amp; Android) and web app with a Reels-style feed of 1-minute learning cards,
+                  topic search, XP leaderboard, streaks and sharing.</li>
+                <li>NestJS REST APIs with JWT and Google sign-in, guest mode, PIN reset and parent approval for
+                  young students.</li>
+                <li>PostgreSQL schema with TypeORM, Redis caching (and no double XP), Bull queues for sync and
+                  leaderboard jobs.</li>
+                <li>Next.js admin panel for card review, publishing, search, moderation and admin roles.</li>
+              </ul>
+              <ul class="chips chips--soft">
+                <li>React Native</li><li>Expo</li><li>Next.js</li><li>TypeScript</li><li>NestJS</li>
+                <li>PostgreSQL</li><li>Redis</li>
+              </ul>
+            </div>
+            <div class="feature__art" aria-hidden="true">
+              <svg viewBox="0 0 400 320">
+                <defs>
+                  <linearGradient id="cbg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ff7300" />
+                    <stop offset="1" stop-color="#ffb26b" />
+                  </linearGradient>
+                </defs>
+                <rect x="40" y="40" width="130" height="250" rx="22" class="svg-panel" transform="rotate(-8 105 165)" />
+                <g class="float-a">
+                  <rect x="140" y="20" width="140" height="270" rx="24" class="svg-phone" />
+                  <rect x="152" y="44" width="116" height="160" rx="14" fill="url(#cbg)" />
+                  <circle cx="210" cy="110" r="26" fill="#0b0a09" opacity=".25" />
+                  <path d="M200 98 l22 12 -22 12z" fill="#0b0a09" />
+                  <rect x="152" y="214" width="80" height="8" rx="4" class="svg-line" />
+                  <rect x="152" y="230" width="104" height="8" rx="4" class="svg-line svg-line--dim" />
+                  <rect x="152" y="256" width="116" height="10" rx="5" class="svg-line svg-line--dim" />
+                  <rect x="152" y="256" width="70" height="10" rx="5" fill="url(#cbg)" />
+                </g>
+                <g class="float-b">
+                  <rect x="270" y="150" width="110" height="64" rx="14" class="svg-card" />
+                  <text x="288" y="178" class="svg-text">XP</text>
+                  <text x="288" y="200" class="svg-text svg-text--big">+120</text>
+                  <circle cx="352" cy="182" r="12" fill="url(#cbg)" />
+                </g>
+              </svg>
+            </div>
+          </article>
+
+          <!-- Swisspuja -->
+          <article class="feature" style="--accent-p:#e8c07a">
+            <div class="feature__body">
+              <span class="feature__tag">Web · Professional · Switzerland</span>
+              <h3>Swisspuja</h3>
+              <p class="feature__sub">Community &amp; event platform for a Bengali cultural association</p>
+              <ul class="feature__points">
+                <li>Member website and dashboard: profile, family members, membership plans, renewals,
+                  contributions and event bookings with seat limits and paid activities.</li>
+                <li>Admin panel for members, events, sponsors, committees and payments, with a payment review
+                  queue, revenue reports and CSV export.</li>
+                <li>NestJS backend: email OTP login, JWT with refresh, role-based access. Moved file storage to
+                  Azure Blob Storage and set up CI/CD with GitHub Actions.</li>
+              </ul>
+              <ul class="chips chips--soft">
+                <li>Next.js</li><li>TypeScript</li><li>Redux Toolkit</li><li>NestJS</li><li>PostgreSQL</li>
+                <li>Azure</li>
+              </ul>
+            </div>
+            <div class="feature__art" aria-hidden="true">
+              <svg viewBox="0 0 400 320">
+                <rect x="30" y="30" width="300" height="220" rx="16" class="svg-phone" />
+                <rect x="30" y="30" width="300" height="34" rx="16" class="svg-panel" />
+                <circle cx="52" cy="47" r="5" fill="#ff5f57" /><circle cx="68" cy="47" r="5" fill="#febc2e" /><circle cx="84" cy="47" r="5" fill="#28c840" />
+                <g class="svg-cal">
+                  <rect x="50" y="84" width="40" height="34" rx="8" class="svg-card" />
+                  <rect x="98" y="84" width="40" height="34" rx="8" class="svg-card" />
+                  <rect x="146" y="84" width="40" height="34" rx="8" fill="#e8c07a" />
+                  <rect x="194" y="84" width="40" height="34" rx="8" class="svg-card" />
+                  <rect x="50" y="126" width="40" height="34" rx="8" class="svg-card" />
+                  <rect x="98" y="126" width="40" height="34" rx="8" class="svg-card" />
+                  <rect x="146" y="126" width="40" height="34" rx="8" class="svg-card" />
+                  <rect x="194" y="126" width="40" height="34" rx="8" fill="#ff7300" opacity=".85" />
+                </g>
+                <rect x="50" y="178" width="120" height="8" rx="4" class="svg-line" />
+                <rect x="50" y="196" width="180" height="8" rx="4" class="svg-line svg-line--dim" />
+                <rect x="50" y="214" width="150" height="8" rx="4" class="svg-line svg-line--dim" />
+                <g class="float-a">
+                  <rect x="250" y="150" width="130" height="110" rx="16" class="svg-card svg-card--hi" />
+                  <text x="268" y="180" class="svg-text">Durga Puja</text>
+                  <text x="268" y="204" class="svg-text svg-text--dim">Seats left</text>
+                  <text x="268" y="238" class="svg-text svg-text--big">42</text>
+                  <path d="M330 220 h28 l-6 -8 m6 8 l-6 8" stroke="#e8c07a" stroke-width="3" fill="none" stroke-linecap="round" />
+                </g>
+              </svg>
+            </div>
+          </article>
+
+          <!-- StoryVerse Land -->
+          <article class="feature" style="--accent-p:#ff9a4d">
+            <div class="feature__body">
+              <span class="feature__tag">Web · Professional · E-commerce</span>
+              <h3>StoryVerse Land</h3>
+              <p class="feature__sub">Personalized children's storybook platform</p>
+              <ul class="feature__points">
+                <li>Multi-language, multi-country store with book catalog, reviews, blog, events and SEO (sitemap,
+                  robots).</li>
+                <li>Book personalization flow with a live preview of the child's name, look and language, plus cart,
+                  checkout, payments (Stripe, PhonePe) and order tracking.</li>
+                <li>Admin panel for users, products, prices per country, translations, orders, discounts and
+                  printers.</li>
+                <li>Helped build a PDF engine with Redis and Bull queues that turns each book into a print-ready PDF.
+                </li>
+              </ul>
+              <ul class="chips chips--soft">
+                <li>Next.js</li><li>TypeScript</li><li>NestJS</li><li>PostgreSQL</li><li>Redis</li><li>Bull</li>
+                <li>AWS S3</li><li>Stripe</li>
+              </ul>
+            </div>
+            <div class="feature__art" aria-hidden="true">
+              <svg viewBox="0 0 400 320">
+                <defs>
+                  <linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ff9a4d" />
+                    <stop offset="1" stop-color="#ff7300" />
+                  </linearGradient>
+                </defs>
+                <g class="float-a">
+                  <path d="M60 80 q70 -24 140 0 v190 q-70 -24 -140 0z" class="svg-phone" />
+                  <path d="M200 80 q70 -24 140 0 v190 q-70 -24 -140 0z" class="svg-panel" />
+                  <circle cx="130" cy="140" r="34" fill="url(#sbg)" />
+                  <circle cx="122" cy="134" r="4" fill="#0b0a09" /><circle cx="140" cy="134" r="4" fill="#0b0a09" />
+                  <path d="M120 150 q10 9 22 0" stroke="#0b0a09" stroke-width="3" fill="none" stroke-linecap="round" />
+                  <rect x="92" y="196" width="76" height="8" rx="4" class="svg-line" />
+                  <rect x="232" y="110" width="80" height="8" rx="4" class="svg-line" />
+                  <rect x="232" y="128" width="64" height="8" rx="4" class="svg-line svg-line--dim" />
+                  <rect x="232" y="146" width="74" height="8" rx="4" class="svg-line svg-line--dim" />
+                  <text x="236" y="210" class="svg-text svg-text--big">Mia</text>
+                </g>
+                <g class="float-b">
+                  <path d="M330 40 l6 14 15 2 -11 10 3 15 -13 -7 -13 7 3 -15 -11 -10 15 -2z" fill="url(#sbg)" />
+                  <circle cx="44" cy="260" r="8" fill="#ff7300" opacity=".6" />
+                </g>
+              </svg>
+            </div>
+          </article>
+        </div>
+
+        <!-- Side projects -->
+        <div class="side">
+          <h3 class="side__title" data-reveal>Side projects <span>— built to learn, shipped to share</span></h3>
+          <div class="side__grid">
+            <article class="mini spotlight" data-reveal>
+              <div class="mini__img"><img src="assets/images/projects/weather-app.webp" alt="Weather app illustration" loading="lazy"></div>
+              <div class="mini__body">
+                <h4>Real-Time Weather App</h4>
+                <p>Live weather and forecasts for any city.</p>
+                <span class="mini__tech">React · OpenWeatherMap API</span>
+                <div class="mini__links">
+                  <a href="https://weathernows.netlify.app/" target="_blank" rel="noopener" aria-label="Live demo: Weather App"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                  <a href="https://github.com/AvikSahaRoy/weathernows.github.io" target="_blank" rel="noopener" aria-label="Source code: Weather App"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="mini spotlight" data-reveal style="--d:.06s">
+              <div class="mini__img"><img src="assets/images/projects/resume-make.webp" alt="ResumeMake app illustration" loading="lazy"></div>
+              <div class="mini__body">
+                <h4>ResumeMake</h4>
+                <p>Build a clean, professional resume in minutes.</p>
+                <span class="mini__tech">React</span>
+                <div class="mini__links">
+                  <a href="https://resumemake.netlify.app/" target="_blank" rel="noopener" aria-label="Live demo: ResumeMake"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                  <a href="https://github.com/AvikSahaRoy/Resume-Generator" target="_blank" rel="noopener" aria-label="Source code: ResumeMake"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="mini spotlight" data-reveal style="--d:.12s">
+              <div class="mini__img"><img src="assets/images/projects/notes-app.webp" alt="Notes app illustration" loading="lazy"></div>
+              <div class="mini__body">
+                <h4>Note-Taking App</h4>
+                <p>Create, edit and delete notes, saved in local storage.</p>
+                <span class="mini__tech">React</span>
+                <div class="mini__links">
+                  <a href="https://quicksnotes.netlify.app/" target="_blank" rel="noopener" aria-label="Live demo: Notes App"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                  <a href="https://github.com/AvikSahaRoy/Notes-App-React" target="_blank" rel="noopener" aria-label="Source code: Notes App"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="mini spotlight" data-reveal>
+              <div class="mini__img"><img src="assets/images/projects/qr-code-generator.webp" alt="QR code generator illustration" loading="lazy"></div>
+              <div class="mini__body">
+                <h4>QR Code Generator</h4>
+                <p>Turn any text or URL into a QR code, with dark mode.</p>
+                <span class="mini__tech">HTML · CSS · JavaScript</span>
+                <div class="mini__links">
+                  <a href="https://qrwave.netlify.app/" target="_blank" rel="noopener" aria-label="Live demo: QR Code Generator"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                  <a href="https://github.com/AvikSahaRoy/QR-Code-Generator" target="_blank" rel="noopener" aria-label="Source code: QR Code Generator"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="mini spotlight" data-reveal style="--d:.06s">
+              <div class="mini__img"><img src="assets/images/projects/password-generator.webp" alt="Password generator illustration" loading="lazy"></div>
+              <div class="mini__body">
+                <h4>Password Generator</h4>
+                <p>Make strong passwords and check their strength.</p>
+                <span class="mini__tech">HTML · CSS · JavaScript · Bootstrap</span>
+                <div class="mini__links">
+                  <a href="https://passwordgeneratorchecker.netlify.app/" target="_blank" rel="noopener" aria-label="Live demo: Password Generator"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                  <a href="https://github.com/AvikSahaRoy/Password-Generator-and-Strength-Checker" target="_blank" rel="noopener" aria-label="Source code: Password Generator"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="mini spotlight" data-reveal style="--d:.12s">
+              <div class="mini__img"><img src="assets/images/projects/notepad.webp" alt="Notepad app illustration" loading="lazy"></div>
+              <div class="mini__body">
+                <h4>Notepad</h4>
+                <p>Private notes saved in your browser, with dark mode.</p>
+                <span class="mini__tech">HTML · CSS · JavaScript · Bootstrap</span>
+                <div class="mini__links">
+                  <a href="https://noteswave.netlify.app/" target="_blank" rel="noopener" aria-label="Live demo: Notepad"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                  <a href="https://github.com/AvikSahaRoy/Notepad" target="_blank" rel="noopener" aria-label="Source code: Notepad"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="mini spotlight" data-reveal>
+              <div class="mini__img"><img src="assets/images/projects/ecommerce-website.webp" alt="E-commerce website illustration" loading="lazy"></div>
+              <div class="mini__body">
+                <h4>E-commerce Website</h4>
+                <p>Product filters, cart and a simple checkout.</p>
+                <span class="mini__tech">Java · JSP · MySQL · Bootstrap</span>
+                <div class="mini__links">
+                  <a href="https://github.com/AvikSahaRoy/E-commerce-Website" target="_blank" rel="noopener" aria-label="Source code: E-commerce Website"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="mini spotlight" data-reveal style="--d:.06s">
+              <div class="mini__img"><img src="assets/images/projects/power-bi-dashboard.webp" alt="Power BI dashboard illustration" loading="lazy"></div>
+              <div class="mini__body">
+                <h4>Power BI Dashboard</h4>
+                <p>Interactive dashboard built from a large real-world dataset.</p>
+                <span class="mini__tech">Power BI Desktop</span>
+                <div class="mini__links">
+                  <a href="https://github.com/AvikSahaRoy/Creating-Dashboard-Using-Power-BI" target="_blank" rel="noopener" aria-label="Source code: Power BI Dashboard"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="mini spotlight" data-reveal style="--d:.12s">
+              <div class="mini__img"><img src="assets/images/projects/rock-paper-scissors.webp" alt="Rock Paper Scissors game illustration" loading="lazy"></div>
+              <div class="mini__body">
+                <h4>Rock Paper Scissors</h4>
+                <p>The classic game, played against the computer.</p>
+                <span class="mini__tech">HTML · CSS · JavaScript · Bootstrap</span>
+                <div class="mini__links">
+                  <a href="https://rpcgames.netlify.app/" target="_blank" rel="noopener" aria-label="Live demo: Rock Paper Scissors"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                  <a href="https://github.com/AvikSahaRoy/Rock-Paper-Scissors-Game" target="_blank" rel="noopener" aria-label="Source code: Rock Paper Scissors"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CERTIFICATIONS ================= -->
+    <section class="section section--alt" id="certifications">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__num" data-reveal>06 — Learning</p>
+          <h2 class="section__title" data-split>Always <em>learning</em>.</h2>
+        </header>
+
+        <div class="certs">
+          <article class="cert spotlight cert--hi" data-reveal>
+            <span class="cert__year">2026</span>
+            <h3><i class="fa-solid fa-robot"></i> Anthropic</h3>
+            <p>Building with the Claude API · Claude Code in Action · Introduction to Model Context Protocol ·
+              Introduction to Agent Skills · Claude 101</p>
+          </article>
+          <article class="cert spotlight" data-reveal style="--d:.06s">
+            <span class="cert__year">Oracle</span>
+            <h3><i class="fa-brands fa-java"></i> Java SE 8 Programmer</h3>
+            <p>Oracle Certified Associate (1Z0-808)</p>
+          </article>
+          <article class="cert spotlight" data-reveal style="--d:.12s">
+            <span class="cert__year">NPTEL</span>
+            <h3><i class="fa-solid fa-graduation-cap"></i> NPTEL Courses</h3>
+            <p>Problem Solving Through Programming in C · Speaking Effectively · Cloud Computing</p>
+          </article>
+          <article class="cert spotlight" data-reveal style="--d:.18s">
+            <span class="cert__year">Simplilearn</span>
+            <h3><i class="fa-solid fa-book"></i> Simplilearn Courses</h3>
+            <p>Python · JavaScript · React.js · Front End Development</p>
+          </article>
+          <article class="cert spotlight" data-reveal style="--d:.24s">
+            <span class="cert__year">DevTown</span>
+            <h3><i class="fa-brands fa-node-js"></i> Back-End Web Development</h3>
+            <p>JavaScript and Node.js</p>
+          </article>
+          <article class="cert spotlight" data-reveal style="--d:.3s">
+            <span class="cert__year">Award</span>
+            <h3><i class="fa-solid fa-trophy"></i> ExQuizIT-2022</h3>
+            <p>2nd runner-up in the IT quiz by the Dept. of Computer Application, SIT.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact" id="contact">
+      <div class="bg-word" data-dir="right" aria-hidden="true">HELLO</div>
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="container">
+        <p class="section__num" data-reveal>07 — Contact</p>
+        <h2 class="contact__title" data-split>Let's build something <em>together</em>.</h2>
+        <p class="contact__lead" data-reveal>
+          Have a project, an idea, or a role in mind? Send me an email and let's talk.
+        </p>
+
+        <div class="contact__actions" data-reveal>
+          <a href="mailto:royavik63@gmail.com" class="btn btn--primary btn--big magnetic">
+            <i class="fa-solid fa-envelope"></i> royavik63@gmail.com
+          </a>
+          <button class="btn btn--ghost btn--big magnetic" id="copyEmail" type="button" data-email="royavik63@gmail.com">
+            <i class="fa-regular fa-copy"></i> <span>Copy email</span>
+          </button>
+        </div>
+
+        <ul class="socials" data-reveal>
+          <li><a href="https://github.com/AvikSahaRoy" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/aviksaharoy/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          <li><a href="https://leetcode.com/u/AvikSahaRoy/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a></li>
+          <li><a href="https://www.instagram.com/aviksaharoy___/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100049670839674" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+        </ul>
+
+        <p class="contact__loc" data-reveal><i class="fa-solid fa-location-dot"></i> Falakata, West Bengal, India</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year">2026</span> Avik Saha Roy</span>
+      <span>Designed &amp; built with care</span>
+      <a href="#home" class="footer__top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-    </div>
-  </section>
-
-
-
-
-  <!-- Footer -->
-  <footer>
-    <span>
-      <!-- – Thanks for visiting! – <br> -->
-      Made With
-      <span style="color: rgb(255, 115, 0);">❤</span>
-      by Avik Saha Roy <br> <span class="far fa-copyright"></span> 2024 All Rights Reserved
-    </span>
   </footer>
 
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Command menu (Ctrl + K) -->
+  <div class="cmdk" id="cmdk" hidden>
+    <div class="cmdk__backdrop" data-close></div>
+    <div class="cmdk__panel" role="dialog" aria-modal="true" aria-label="Command menu">
+      <div class="cmdk__search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input id="cmdkInput" type="text" placeholder="Type a command or search…" autocomplete="off"
+          spellcheck="false" role="combobox" aria-expanded="true" aria-controls="cmdkList"
+          aria-autocomplete="list" aria-label="Search commands">
+        <kbd>Esc</kbd>
+      </div>
+      <ul class="cmdk__list" id="cmdkList" role="listbox" aria-label="Commands"></ul>
+      <div class="cmdk__foot" aria-hidden="true">
+        <span><kbd>↑</kbd><kbd>↓</kbd> move</span>
+        <span><kbd>Enter</kbd> select</span>
+        <span><kbd>Esc</kbd> close</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="./js/script.js"></script>
 </body>
-<!-- partial -->
-<script src='https://kit.fontawesome.com/3b57a2a2a7.js'></script>
-<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
-<script src="./script.js"></script>
 
 </html>
